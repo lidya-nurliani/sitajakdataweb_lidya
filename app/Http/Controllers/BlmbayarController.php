@@ -15,9 +15,8 @@ class BlmbayarController extends Controller
      */
     public function index()
     {
-        $blmbayar = Blmbayar::paginate(10);
+        $blmbayar = Blmbayar::all();
         return view('blmbayar.index-blmbayar',compact('blmbayar'));
-
     }
 
     /**

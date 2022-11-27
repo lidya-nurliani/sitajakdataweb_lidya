@@ -12,13 +12,9 @@ class DafkenController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-
-        $dafken = Dafken::paginate(10);
+    public function index() {
+        $dafken = Dafken::all();
         return view('dafken.index-dafken',compact('dafken'));
-
-        
     }
 
     /**

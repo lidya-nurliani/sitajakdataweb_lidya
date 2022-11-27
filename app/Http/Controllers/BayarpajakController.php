@@ -15,9 +15,8 @@ class BayarpajakController extends Controller
      */
     public function index()
     {
-        $bayarpajak = Bayarpajak::paginate(10);
+        $bayarpajak = Bayarpajak::all();
         return view('bayarpajak.index-bayarpajak',compact('bayarpajak'));
-
     }
 
     /**

@@ -1,0 +1,1 @@
+SELECT MONTHNAME(bayarpajak.tgl_bayar) as bulan,bayarpajak.tgl_bayar,COUNT(bayarpajak.id) as total FROM `bayarpajak` LEFT JOIN dafken ON bayarpajak.dafken_id=dafken.id WHERE dafken.jenis_kendaraan='Roda 2' GROUP BY YEAR(bayarpajak.tgl_bayar),Month(bayarpajak.tgl_bayar);

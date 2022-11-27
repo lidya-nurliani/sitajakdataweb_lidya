@@ -1,140 +1,126 @@
-<!DOCTYPE html>
-<!--
-This is a starter template page. Use this page to start your new project from
-scratch. This page gets rid of all links and provides the needed markup only.
--->
-<html lang="en">
-<head>
-<title>Pajak | Starter</title>
-    @include('Template.head')
-</head>
-<body class="hold-transition sidebar-mini">
-<div class="wrapper">
+@extends('layouts.app')
 
-  <!-- Navbar -->
-  @include('Template.navbar')
-  <!-- /.navbar -->
+@section('title','Data Kendaraan')
 
-  <!-- Main Sidebar Container -->
- 
-  @include('Template.left-sidebar')
+@section('css')
+<link rel="stylesheet" href="{{ asset('adminLte/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}">
+<link rel="stylesheet" href="{{ asset('adminLte/plugins/datatables-responsive/css/responsive.bootstrap4.min.css') }}">
+<link rel="stylesheet" href="{{ asset('adminLte/plugins/datatables-buttons/css/buttons.bootstrap4.min.css') }}">
+@endsection
 
+@section('js')
+<script src="{{ asset('adminLte/plugins/datatables/jquery.dataTables.min.js') }}"></script>
+<script src="{{ asset('adminLte/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
+<script src="{{ asset('adminLte/plugins/datatables-responsive/js/dataTables.responsive.min.js') }}"></script>
+<script src="{{ asset('adminLte/plugins/datatables-responsive/js/responsive.bootstrap4.min.js') }}"></script>
+<script src="{{ asset('adminLte/plugins/datatables-buttons/js/dataTables.buttons.min.js') }}"></script>
+<script src="{{ asset('adminLte/plugins/datatables-buttons/js/buttons.bootstrap4.min.js') }}"></script>
+<script src="{{ asset('adminLte/plugins/jszip/jszip.min.js') }}"></script>
+<script src="{{ asset('adminLte/plugins/pdfmake/pdfmake.min.js') }}"></script>
+<script src="{{ asset('adminLte/plugins/pdfmake/vfs_fonts.js') }}"></script>
+<script src="{{ asset('adminLte/plugins/datatables-buttons/js/buttons.html5.min.js') }}"></script>
+<script src="{{ asset('adminLte/plugins/datatables-buttons/js/buttons.print.min.js') }}"></script>
+<script src="{{ asset('adminLte/plugins/datatables-buttons/js/buttons.colVis.min.js') }}"></script>
+<script src="{{ asset('adminLte/dist/js/adminlte.min.js?v=3.2.0') }}"></script>
+<script src="{{ asset('adminLte/dist/js/demo.js') }}"></script>
+<script>
+    $(function () {
+        $("#example1").DataTable({
+            "responsive": true
+        });
+    });
+</script>
+@endsection
 
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <div class="content-header">
-      <div class="container-fluid">
+@section('content')
+<!-- Content Header (Page header) -->
+<div class="content-header">
+    <div class="container-fluid">
         <div class="row mb-2">
-          <div class="col-sm-12">
-            <center>
-            <h1 class="m-0">Daftar Kendaraan Dinas Roda 2 dan Roda 4 DISPANTPH Provinsi Kalimantan Timur</h1>
-            </center>
+            <div class="col-sm-12">
+                <center>
+                    <h1 class="m-0">Daftar Kendaraan Dinas Roda 2 dan Roda 4 DISPANTPH Provinsi Kalimantan Timur</h1>
+                </center>
             </div><!-- /.col -->
         </div><!-- /.row -->
-      </div><!-- /.container-fluid -->
+    </div><!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
+<!-- Main content -->
+<div class="content">
+    <div class="card card-info card-outline">
+        <div class="card-header">
+            <h3>List Daftar Kendaraan</h3>
+        </div>
     </div>
-    <!-- /.content-header -->
-    <!-- Main content -->
-    <div class="content">
-        <div class = "card card-info card-outline">
-            <div class = "card-header">
-               <h3>List Daftar Kendaraan</h3>
+
+    <!-- /.content -->
+</div>
+
+
+
+
+<!-- Main content -->
+<div class="content">
+    <div class="card card-info card-outline">
+        <div class="card-header">
+            <div class="card-tools">
+                @if(auth()->user()->level == "admin")
+                <a href="{{ route('create-dafken') }}" class="btn btn-success"> Tambah Data <i
+                        class="far fa-plus-square"></i></a>
             </div>
+            @endif
         </div>
 
-    <!-- /.content -->
-  </div>
 
-  
-
-
-    <!-- Main content -->
-    <div class="content">
-    <div class="card card-info card-outline">
-       <div class="card-header">
-         <div class="card-tools">
-         @if(auth()->user()->level == "admin")
-           <a href="{{ route('create-dafken') }}" class="btn btn-success"> Tambah Data <i class="far fa-plus-square"></i></a>
-            </div>
-            @endif
-       </div>
-
-       
-       <div class="card-body">
-         <table class="table table-bordered">
-           <tr>
-             <th>No</th>
-             <th>nama pemegang</th>
-             <th>Jenis kendaraan</th>
-             <th>no polisi</th>
-             <th>no mesin</th>
-             <th>no rangka</th>
-             <th>tahun</th>
-             <th>harga perolehan</th>
-             <th>sumber dana</th>
-             <th>keterangan</th>
-             <th>Aksi</th>
-           </tr>
-           @foreach ($dafken as $item)
-           <tr>
-            <td>{{ $dafken->count() * ($dafken->currentPage() - 1) + $loop->iteration }}</td>
-            <td>{{ $item->nama_pemegang}}</td>
-            <td>{{ $item->jenis_kendaraan}}</td>
-            <td>{{ $item->no_polisi}}</td>
-            <td>{{ $item->no_mesin}}</td>
-            <td>{{ $item->no_rangka}}</td>
-            <td>{{ $item->tahun}}</td>
-            <td>Rp. {{ number_format($item->harga_perolehan) }}</td>
-            <td>{{ $item->sumber_dana}}</td>
-            <td>{{ $item->keterangan}}</td>
-
-          
-            <td>
-            @if(auth()->user()->level == "admin")
-            <center>
-              <a href="{{ url('edit-dafken', $item->id) }}"><i class="fas fa-edit"></i></a>
-              |
-              <a href="{{ url('delete-dafken', $item->id) }}"><i class="fas fa-trash-alt" style="color: red"></i></a>
-            </center>
-            @endif
-            </td>
-           </tr>
-           @endforeach
-         </table>
-
-         <div class="card-footer">
-            {{ $dafken->links() }}  
-          </div>
-
-       </div>
-     </div>
+        <div class="card-body">
+            <table id="example1" class="table table-bordered">
+              <thead>
+                <tr>
+                    <th>No</th>
+                    <th>nama pemegang</th>
+                    <th>Jenis kendaraan</th>
+                    <th>no polisi</th>
+                    <th>no mesin</th>
+                    <th>no rangka</th>
+                    <th>tahun</th>
+                    <th>harga perolehan</th>
+                    <th>sumber dana</th>
+                    <th>keterangan</th>
+                    <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody>
+                @foreach ($dafken as $item)
+                <tr>
+                    <td>{{ $loop->iteration }}</td>
+                    <td>{{ $item->nama_pemegang}}</td>
+                    <td>{{ $item->jenis_kendaraan}}</td>
+                    <td>{{ $item->no_polisi}}</td>
+                    <td>{{ $item->no_mesin}}</td>
+                    <td>{{ $item->no_rangka}}</td>
+                    <td>{{ $item->tahun}}</td>
+                    <td>Rp. {{ number_format($item->harga_perolehan) }}</td>
+                    <td>{{ $item->sumber_dana}}</td>
+                    <td>{{ $item->keterangan}}</td>
 
 
-    
+                    <td>
+                        @if(auth()->user()->level == "admin")
+                        <center>
+                            <a href="{{ url('edit-dafken', $item->id) }}"><i class="fas fa-edit"></i></a>
+                            |
+                            <a href="{{ url('delete-dafken', $item->id) }}"><i class="fas fa-trash-alt"
+                                    style="color: red"></i></a>
+                        </center>
+                        @endif
+                    </td>
+                </tr>
+                @endforeach
+              </tbody>
+            </table>
+        </div>
     </div>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
-
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-    <div class="p-3">
-      <h5>Title</h5>
-      <p>Sidebar content</p>
-    </div>
-  </aside>
-  <!-- /.control-sidebar -->
-
-  <!-- Main Footer -->
-  @include('Template.footer')
 </div>
-<!-- ./wrapper -->
-
-<!-- REQUIRED SCRIPTS -->
-@include('Template.script')
-<!-- jQuery -->
-
-</body>
-</html>
+<!-- /.content -->
+@endsection

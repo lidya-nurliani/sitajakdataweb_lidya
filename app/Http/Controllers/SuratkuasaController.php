@@ -15,7 +15,7 @@ class SuratkuasaController extends Controller
      */
     public function index()
     {
-        $suratkuasa = Suratkuasa::paginate(10);
+        $suratkuasa = Suratkuasa::all();
         return view('suratkuasa.index-suratkuasa',compact('suratkuasa'));
     }
 
