@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title','Surat Kuasa')
+@section('title','blmbayar')
 
 @section('css')
 <link rel="stylesheet" href="{{ asset('adminLte/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}">

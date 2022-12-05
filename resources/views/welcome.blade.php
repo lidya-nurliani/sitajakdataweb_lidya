@@ -62,7 +62,7 @@
 
     <!-- music  -->
         <audio hidden autoplay loop> 
-        <source src="{{ asset('AdminLte/dist/img/.mp3')}}" type="audio/mpeg">
+        <source src="{{ asset('AdminLte/dist/img/marskeuangan.mp3')}}" type="audio/mpeg">
         </audio>
             
 
@@ -88,9 +88,9 @@
                 
 
                 <button class="button button1">
-                @if (Route::has('registrasi'))
+                @if (Route::has('register'))
                 <div class="pull-right">
-                <a href="{{ route('registrasi') }}" >Register</a>
+                <a href="{{ route('register') }}" >Register</a>
                  </div>
                  @endif </button>
 

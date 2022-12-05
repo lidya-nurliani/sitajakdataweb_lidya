@@ -15,7 +15,7 @@ class PerbaruanplatController extends Controller
      */
     public function index()
     {
-        $perbaruanplat = Perbaruanplat::paginate(10);
+        $perbaruanplat = Perbaruanplat::all();
         return view('perbaruanplat.index-perbaruanplat',compact('perbaruanplat'));
     }
 

@@ -13,7 +13,7 @@
             </div>
             <div class="info">
                 <a href="#" class="d-block">
-                    <p>Hai, {{ auth()->user()->name }} !</p>
+                    <p>{{ auth()->user()->name }} </p>
                 </a>
             </div>
         </div>

@@ -17,9 +17,7 @@
 </head>
 <body class="hold-transition register-page">
 
-<audio hidden autoplay loop>
-                <source src="{{ asset('AdminLte/dist/img/pertanian.mp3')}}" type="audio/mpeg">
-            </audio>
+
 
 <div class="register-box">
   <div class="register-logo">

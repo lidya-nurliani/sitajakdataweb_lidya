@@ -37,7 +37,7 @@
 
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <a href="#" class="brand-link">
-                <img src="{{ asset('AdminLte/dist/img/logoawal.png')}}" height="80" width="90">SITAJAK DATA
+                <img src="{{ asset('AdminLte/dist/img/logohome.png')}}" height="80" width="90">SITAJAK DATA
             </a>
 
             <head>
@@ -54,7 +54,7 @@
                         <i class="fas fa-solid fa-user-tie"></i>
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block">{{ auth()->user()->name }}</a>
+                        <a href="#" class="d-block">Hai {{ auth()->user()->name }} !</a>
                     </div>
                 </div>
                 
@@ -106,8 +106,6 @@
                                         <p>Data Pembayar Selanjutnya</p>
                                     </a>
                                 </li>
-
-
                             </ul>
                         </li>
 
@@ -172,6 +170,7 @@
             <div class="float-right d-none d-sm-inline">
                 Lidya Nurliani
             </div>
+            
             <!-- Default to the left -->
             <strong>Copyright &copy; 2022 <a href="https://adminlte.io">Sistem Informasi Data pajak
                     kendaraan</a>.</strong> All rights reserved.

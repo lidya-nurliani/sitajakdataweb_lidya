@@ -19,9 +19,7 @@
 </head>
 <body class="hold-transition login-page">
 
-<audio hidden autoplay loop>
-                <source src="{{ asset('AdminLte/dist/img/pertanian.mp3')}}" type="audio/mpeg">
-            </audio>
+
 
 <div class="login-box">
   <div class="login-logo">
