@@ -6,9 +6,9 @@
 @section('js')
 <script src="{{ asset('AdminLte/plugins/chart.js/Chart.min.js') }}"></script>
 <script src="{{ asset('adminLte/dist/js/demo.js') }}"></script>
-
 <script>
 $(function(){
+<<<<<<< HEAD
 
 //get the line chart canvas
 var ctx = $("#lineChart");
@@ -34,29 +34,97 @@ var data = {
       fill: false,
       lineTension: 0,
       radius: 5
+=======
+    //get the line chart canvas
+    var ctx = $("#lineChart");
+    //line chart data
+    var data = {
+        labels: [
+            @foreach($statsRoda2 as $item)
+                "{{ $item->bulan }}",
+            @endforeach
+        ],
+        datasets: [
+        {
+            label: "Roda 2",
+            data: [
+                @foreach($statsRoda2 as $item)
+                    {{ $item->total }},
+                @endforeach
+            ],
+            backgroundColor: "blue",
+            borderColor: "lightblue",
+            fill: false,
+            lineTension: 0,
+            radius: 5
+        },
+        {
+            label: "Roda 4",
+            data: [
+                @foreach($statsRoda4 as $item)
+                    {{ $item->total }},
+                @endforeach
+            ],
+            backgroundColor: "green",
+            borderColor: "lightgreen",
+            fill: false,
+            lineTension: 0,
+            radius: 5
+        }
+        ]
+    };
+    //options
+    var options = {
+        responsive: true,
+        legend: {
+            display: true,
+            position: "bottom",
+            labels: {
+            fontColor: "#333",
+            fontSize: 16
+        }
+        }
+    };
+    //create Chart class object
+    var chart = new Chart(ctx, {
+        type: "line",
+        data: data,
+        options: options
+    });
+    
+    //-------------
+      //- DONUT CHART -
+      //-------------
+      // Get context with jQuery - using jQuery's .get() method.
+    var donutData = {
+        labels: [
+            'Roda 2',
+            'Roda 4'
+        ],
+        datasets: [{
+            data: [{{ $jmlR2 }}, {{ $jmlR4 }}],
+            backgroundColor: ['#f56954', '#00a65a'],
+        }]
+>>>>>>> ddb5e1525dfa569795e215f417ea10a852b7da1b
     }
-  ]
-};
 
-//options
-var options = {
-  responsive: true,
-  legend: {
-    display: true,
-    position: "bottom",
-    labels: {
-      fontColor: "#333",
-      fontSize: 16
+    //-------------
+    //- PIE CHART -
+    //-------------
+    // Get context with jQuery - using jQuery's .get() method.
+    var pieChartCanvas = $('#jnsKendaraan').get(0).getContext('2d')
+    var pieData = donutData;
+    var pieOptions = {
+    maintainAspectRatio: false,
+    responsive: true,
     }
-  }
-};
-
-//create Chart class object
-var chart = new Chart(ctx, {
-  type: "line",
-  data: data,
-  options: options
-});
+    //Create pie or douhnut chart
+    // You can switch between pie and douhnut using the method below.
+    new Chart(pieChartCanvas, {
+    type: 'pie',
+    data: pieData,
+    options: pieOptions
+    })
 });
 </script>
 @endsection
@@ -153,7 +221,7 @@ var chart = new Chart(ctx, {
 <section class="content">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-6">
                 <div class="card card-info">
                     <div class="card-header">
                         <h3 class="card-title">Data Perbaruan Plat Kendaraan Roda 2 dan 4</h3>
@@ -168,8 +236,23 @@ var chart = new Chart(ctx, {
                     </div>
                     <div class="card-body">
                         <div class="chart">
-                            <canvas id="lineChart"></canvas>
+                            <canvas id="lineChart" style="min-height: 300px; height: 300px; max-height: 300px; max-width: 100%;"></canvas>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card card-danger">
+                    <div class="card-header">
+                        <h3 class="card-title">Jenis Kendaraan</h3>
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                            <i class="fas fa-minus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                    <canvas id="jnsKendaraan" style="min-height: 300px; height: 300px; max-height: 300px; max-width: 100%;"></canvas>
                     </div>
                 </div>
             </div>
