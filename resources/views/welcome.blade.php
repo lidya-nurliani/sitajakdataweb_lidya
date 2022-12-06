@@ -71,13 +71,15 @@
             <img src="{{ asset('AdminLte/dist/img/logoawal.png')}}" height="500" width="500">
             </center>
 
+        
+            
             <center>
             <button class="button button1">
                 @if (Route::has('login'))
 
                 <div class="pull-right">
                 @auth
-                 <a href="{{ url('/home') }}">home</a>
+                 <a href="{{ url('/home') }} ">home</a>
                 </div>
 
                 @else

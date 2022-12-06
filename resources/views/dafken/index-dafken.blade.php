@@ -79,6 +79,7 @@
                 <tr>
                     <th>No</th>
                     <th>nama pemegang</th>
+                    <th>merk kendaraan</th>
                     <th>Jenis kendaraan</th>
                     <th>no polisi</th>
                     <th>no mesin</th>
@@ -87,6 +88,7 @@
                     <th>harga perolehan</th>
                     <th>sumber dana</th>
                     <th>keterangan</th>
+                    <th>foto fisik</th>
                     <th>Aksi</th>
                 </tr>
               </thead>
@@ -95,6 +97,7 @@
                 <tr>
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $item->nama_pemegang}}</td>
+                    <td>{{ $item->merk_kendaraan}}</td>
                     <td>{{ $item->jenis_kendaraan}}</td>
                     <td>{{ $item->no_polisi}}</td>
                     <td>{{ $item->no_mesin}}</td>
@@ -103,6 +106,7 @@
                     <td>Rp. {{ number_format($item->harga_perolehan) }}</td>
                     <td>{{ $item->sumber_dana}}</td>
                     <td>{{ $item->keterangan}}</td>
+                    <td>{{ $item->foto_fisik}}</td>
 
 
                     <td>

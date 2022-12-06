@@ -14,7 +14,7 @@
 
 <body class="hold-transition sidebar-mini">
     <div class="wrapper">
-        <nav class="main-header navbar navbar-expand navbar-dark navbar-light">
+        <nav class="main-header navbar navbar-expand bg-navy navbar-dark">
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
@@ -35,26 +35,22 @@
             </ul>
         </nav>
 
-        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <aside class="main-sidebar bg-navy sidebar-dark-light elevation-4">
             <a href="#" class="brand-link">
-                <img src="{{ asset('AdminLte/dist/img/logohome.png')}}" height="80" width="90">SITAJAK DATA
+                <img src="{{ asset('AdminLte/dist/img/navy.png')}}" height="80" width="90">SITAJAK DATA
             </a>
 
-            <head>
-                <style media="screen">
-                    body {
-                        background-color: #2F4F4F;
-                    }
-
-                </style>
-            </head>
+        
             <div class="sidebar">
-                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                <div class="user-panel mt-4 pb-4 mb-4 d-flex">
                     <div class="image">
                         <i class="fas fa-solid fa-user-tie"></i>
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block">Hai {{ auth()->user()->name }} !</a>
+                            <a href="#" class="d-block">
+                            <font color="white">Hai {{ auth()->user()->name }} !</font>
+                            </a>
+                        
                     </div>
                 </div>
                 
@@ -65,7 +61,7 @@
                             <a href="{{ route('home') }}" class="nav-link ">
                                 <i class="fas fa-home"></i>
                                 <p>
-                                    <font color="white">Dashboard</font>
+                                    <font color="yellow">Dashboard</font>
                                 </p>
                             </a>
                         </li>
@@ -73,7 +69,7 @@
                             <a href="#" class="nav-link ">
                                 <i class="fas fa-user"></i>
                                 <p>
-                                    Daftar Kendaraan
+                                    <font color="white">Daftar Kendaraan</font>
                                     <i class="right fas fa-angle-left"></i>
                                 </p>
                             </a>
@@ -81,7 +77,9 @@
                                 <li class="nav-item">
                                     <a href="{{ route('index-dafken') }}" class="nav-link ">
                                         <i class="fas fa-file-alt"></i>
-                                        <p>Data kendaraan</p>
+                                        <p>
+                                        <font color="white">Data kendaraan</font>
+                                        </p>
                                     </a>
                                 </li>
                             </ul>
@@ -91,7 +89,7 @@
                             <a href="" class="nav-link ">
                                 <i class="fas fa-users"></i>
                                 <p>
-                                    Pembayar Pajak & STNK
+                                    <font color="white">Pembayar Pajak STNK</font>
                                     <i class="right fas fa-angle-left"></i>
                                 </p>
                             </a>
@@ -99,7 +97,10 @@
                                 <li class="nav-item">
                                     <a href="{{ route('index-bayarpajak') }}" class="nav-link ">
                                         <i class="fas fa-file-alt"></i>
-                                        <p>Data Pembayar Selesai</p>
+                                        <p>
+                                        <font color="white">Data Pembayar Selesai</font>
+                                    
+                                    </p>
                                     </a>
                                     <a href="{{ route('index-blmbayar') }}" class="nav-link ">
                                         <i class="fas fa-file-alt"></i>
@@ -113,7 +114,7 @@
                             <a href="#" class="nav-link ">
                                 <i class="fas fa-table"></i>
                                 <p>
-                                    Surat kuasa
+                                    <font color="white">Surat kuasa</font>
                                     <i class="right fas fa-angle-left"></i>
                                 </p>
                             </a>
@@ -131,9 +132,10 @@
                             <a href="#" class="nav-link ">
                                 <i class="fas fa-table"></i>
                                 <p>
-                                    Perbaruan NOPOL Kendaraan
-                                    <i class="right fas fa-angle-left"></i>
+                                <font color="white">Perbaruan NOPOL Kendaraan</font>
+                                <i class="right fas fa-angle-left"></i>
                                 </p>
+                                
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
@@ -148,8 +150,10 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();
                                         document.getElementById('logout-form').submit();">
-                                <i class="fas fa-sign-out-alt"></i>
+                                <font color="white">
+                                    <i class="fas fa-sign-out-alt"></i>
                                 {{ __('Logout') }}
+                                </font>
                             </a>
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

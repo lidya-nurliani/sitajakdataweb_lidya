@@ -35,8 +35,14 @@ class DafkenController extends Controller
      */
     public function store(Request $request)
     {
+        $validated = $request->validated();
+
+        $fileName = time().'.'.$request->foto_fisik->extension();
+        $request->foto_fisik->move(public_path('foto_fisik'), $fileName);
+
         $dafken = new Dafken;
         $dafken->nama_pemegang = $request->nama_pemegang;
+        $dafken->merk_kendaraan = $request->merk_kendaraan;
         $dafken->jenis_kendaraan = $request->jenis_kendaraan;
         $dafken->no_polisi = $request->no_polisi;
         $dafken->no_mesin = $request->no_mesin;
@@ -45,7 +51,7 @@ class DafkenController extends Controller
         $dafken->harga_perolehan = $request->harga_perolehan;
         $dafken->sumber_dana = $request->sumber_dana;
         $dafken->keterangan = $request->keterangan;
-
+        $dafken->foto_fisik = $fileName;
         $dafken->save();
 
         return redirect('index-dafken');
@@ -83,6 +89,10 @@ class DafkenController extends Controller
      */
     public function update(Request $request, $id)
     {
+
+        $fileName = time().'.'.$request->foto_fisik->extension();
+        $request->foto_fisik->move(public_path('foto_fisik'), $fileName);
+
         $dafken = Dafken::findorfail($id);
         $dafken->update($request->all());
 

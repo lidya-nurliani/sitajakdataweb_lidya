@@ -8,33 +8,6 @@
 <script src="{{ asset('adminLte/dist/js/demo.js') }}"></script>
 <script>
 $(function(){
-<<<<<<< HEAD
-
-//get the line chart canvas
-var ctx = $("#lineChart");
-
-//line chart data
-var data = {
-  labels: ["2022", "2023", "2024", "2025", "2026"],
-  datasets: [
-    {
-      label: "Roda 2",
-      data: [2, 15, 20, 1, 4],
-      backgroundColor: "blue",
-      borderColor: "lightblue",
-      fill: false,
-      lineTension: 0,
-      radius: 5
-    },
-    {
-      label: "Roda 4",
-      data: [0, 5, 12, 1, 2],
-      backgroundColor: "green",
-      borderColor: "lightgreen",
-      fill: false,
-      lineTension: 0,
-      radius: 5
-=======
     //get the line chart canvas
     var ctx = $("#lineChart");
     //line chart data
@@ -105,7 +78,6 @@ var data = {
             data: [{{ $jmlR2 }}, {{ $jmlR4 }}],
             backgroundColor: ['#f56954', '#00a65a'],
         }]
->>>>>>> ddb5e1525dfa569795e215f417ea10a852b7da1b
     }
 
     //-------------
@@ -154,7 +126,7 @@ var data = {
     <div class="row">
 
         <div class="col-lg-3 col-xs-6">
-            <div class="small-box bg-dark">
+            <div class="small-box bg-cyan">
                 <div class="inner">
                     <span class="info-box-number">
                         <h3 align="center">{{$dafken}}</h3>
@@ -169,7 +141,7 @@ var data = {
         </div>
 
         <div class="col-lg-3 col-xs-6">
-            <div class="small-box bg-dark">
+            <div class="small-box bg-cyan">
                 <div class="inner">
                     <span class="info-box-number">
                         <h3 align="center">{{$bayarpajak}}</h3>
@@ -185,7 +157,7 @@ var data = {
 
         <div class="col-lg-3 col-xs-6">
 
-            <div class="small-box bg-dark">
+            <div class="small-box bg-cyan">
                 <div class="inner">
                     <span class="info-box-number">
                         <h3 align="center">{{$blmbayar}}</h3>
@@ -201,7 +173,7 @@ var data = {
 
         <div class="col-lg-3 col-xs-6">
 
-            <div class="small-box bg-dark">
+            <div class="small-box bg-cyan">
                 <div class="inner">
                     <span class="info-box-number">
                         <h3 align="center">{{$suratkuasa}}</h3>

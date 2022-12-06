@@ -37,6 +37,13 @@
             <input type="text" id="nama_pemegang" name="nama_pemegang" class="form-control" placeholder="Nama Pemegang"
                 value="{{ $dafken->nama_pemegang }}">
         </div>
+
+        <div class="form-group">
+            <input type="text" id="merk_kendaraan" name="merk_kendaraan" class="form-control" placeholder="Merk Kendaraan"
+                value="{{ $dafken->merk_kendaraan }}">
+        </div>
+
+
         <div class="form-group">
             <select id="jenis_kendaraan" name="jenis_kendaraan" class="form-control" placeholder="Jenis Kendaraan"
                 value="{{ $dafken->jenis_kendaraan }}">
@@ -77,6 +84,12 @@
             <input type="text" id="keterangan" name="keterangan" class="form-control" placeholder="keterangan"
                 value="{{ $dafken->keterangan }}">
         </div>
+
+        <div class="form-group">
+            <input type="file" id="foto_fisik" name="foto_fisik" class="form-control" placeholder="foto fisik"
+                value="{{ $dafken->foto_fisik }}">
+        </div>
+
         <div class="form-group">
             <button type="submit" class="btn btn-primary">Ubah Data</button>
         </div>

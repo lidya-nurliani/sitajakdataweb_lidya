@@ -16,6 +16,7 @@ class CreateDafkenTable extends Migration
         Schema::create('dafken', function (Blueprint $table) {
             $table->id();
             $table->string('nama_pemegang');
+            $table->string('merk_kendaraan');
             $table->string('jenis_kendaraan');
             $table->string('no_polisi');
             $table->string('no_mesin');

@@ -31,6 +31,10 @@
                         placeholder="Nama pemegang">
                 </div>
                 <div class="form-group">
+                    <input type="text" id="merk_kendaraan" name="merk_kendaraan" class="form-control"
+                        placeholder="Merk Kendaraan">
+                </div>
+                <div class="form-group">
                     <select class="form-control select2" style="width : 100%;" name="jenis_kendaraan"
                         id="jenis_kendaraan" placeholder="Jenis Kendaraan">
                         <option value="">Jenis Kendaraan</option>
@@ -66,6 +70,11 @@
                 <div class="form-group">
                     <input type="text" id="keterangan" name="keterangan" class="form-control" placeholder="keterangan">
                 </div>
+
+                <div class="form-group">
+                    <input type="file" id="foto_fisik" name="foto_fisik" class="form-control" placeholder="foto fisik">
+                </div>
+
                 <div class="form-group">
                     <button type="submit" class="btn btn-success">Simpan Data</button>
                 </div>
