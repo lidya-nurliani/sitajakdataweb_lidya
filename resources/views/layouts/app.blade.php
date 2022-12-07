@@ -14,7 +14,7 @@
 
 <body class="hold-transition sidebar-mini">
     <div class="wrapper">
-        <nav class="main-header navbar navbar-expand bg-navy navbar-dark">
+        <nav class="main-header navbar navbar-expand bg-blue navbar-dark">
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
@@ -35,9 +35,9 @@
             </ul>
         </nav>
 
-        <aside class="main-sidebar bg-navy sidebar-dark-light elevation-4">
+        <aside class="main-sidebar bg-blue sidebar-dark-light elevation-4">
             <a href="#" class="brand-link">
-                <img src="{{ asset('AdminLte/dist/img/navy.png')}}" height="80" width="90">SITAJAK DATA
+                <img src="{{ asset('AdminLte/dist/img/1.png')}}" height="80" width="90">SITAJAK DATA
             </a>
 
         

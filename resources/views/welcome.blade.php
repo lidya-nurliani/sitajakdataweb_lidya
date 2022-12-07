@@ -27,7 +27,7 @@
 
 
             body {
-                background-image: url(AdminLte/dist/img/bg.png);
+                background-image: url(AdminLte/dist/img/bgnavy.png);
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-position: center;
@@ -68,7 +68,7 @@
 
         <div>
             <center>
-            <img src="{{ asset('AdminLte/dist/img/logoawal.png')}}" height="500" width="500">
+            <img src="{{ asset('AdminLte/dist/img/2.png')}}" height="500" width="500">
             </center>
 
         
