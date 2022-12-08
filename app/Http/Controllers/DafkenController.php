@@ -35,8 +35,7 @@ class DafkenController extends Controller
      */
     public function store(Request $request)
     {
-        $validated = $request->validated();
-
+      
         $fileName = time().'.'.$request->foto_fisik->extension();
         $request->foto_fisik->move(public_path('foto_fisik'), $fileName);
 
@@ -90,8 +89,11 @@ class DafkenController extends Controller
     public function update(Request $request, $id)
     {
 
-        $fileName = time().'.'.$request->foto_fisik->extension();
-        $request->foto_fisik->move(public_path('foto_fisik'), $fileName);
+       if(Request()->hasFile('foto_fisik')) {
+            $file = Request()->file('foto_fisik');
+            $fileName = Request()->foto_fisik.'.'.$request->extension();
+            $file->move(public_path('foto_fisik'), $fileName);
+       }
 
         $dafken = Dafken::findorfail($id);
         $dafken->update($request->all());

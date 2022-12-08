@@ -72,7 +72,7 @@
             @endif
         </div>
 
-
+        <div style="overflow-x:auto">
         <div class="card-body">
             <table id="example1" class="table table-bordered">
               <thead>
@@ -106,7 +106,7 @@
                     <td>Rp. {{ number_format($item->harga_perolehan) }}</td>
                     <td>{{ $item->sumber_dana}}</td>
                     <td>{{ $item->keterangan}}</td>
-                    <td>{{ $item->foto_fisik}}</td>
+                    <td><a href="{{asset('foto_fisik/'.$item->foto_fisik)}}">{{ $item->foto_fisik}}</a></td>
 
 
                     <td>
@@ -125,6 +125,7 @@
             </table>
         </div>
     </div>
+</div>
 </div>
 <!-- /.content -->
 @endsection
