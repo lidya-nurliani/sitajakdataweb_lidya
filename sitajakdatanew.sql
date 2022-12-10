@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 06, 2022 at 01:56 PM
+-- Generation Time: Dec 08, 2022 at 12:02 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -167,8 +167,8 @@ CREATE TABLE `dafken` (
 --
 
 INSERT INTO `dafken` (`id`, `nama_pemegang`, `merk_kendaraan`, `jenis_kendaraan`, `no_polisi`, `no_mesin`, `no_rangka`, `tahun`, `harga_perolehan`, `sumber_dana`, `keterangan`, `foto_fisik`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(3, 'M. aswan M', 'toyota kijang pick up', 'Roda 4', 'KT 8275 B', '7K - 0191496', 'MHF31KF6000005766', '1997', '0', 'APBD', 'Rusak', '', '2022-10-15 23:27:40', '2022-12-06 03:23:32', NULL),
-(4, 'Ambran Hasan', '', 'Roda 4', 'KT 1086 C', '9941076', '994128', '1999', '0', 'APBN', 'proses penghapusan', '', '2022-10-15 23:28:43', '2022-10-15 23:28:43', NULL),
+(3, 'M. aswan M', 'toyota kijang pick up', 'Roda 4', 'KT 8275 B', '7K - 0191496', 'MHF31KF6000005766', '1997', '0', 'APBD', 'Rusak', 'Screenshot (1).png', '2022-10-15 23:27:40', '2022-12-07 07:03:33', NULL),
+(4, 'Ambran Hasan', 'toyota kijang pick up', 'Roda 4', 'KT 1086 C', '9941076', '994128', '1999', '0', 'APBN', 'proses penghapusan', 'Screenshot (2).png', '2022-10-15 23:28:43', '2022-12-07 07:13:35', NULL),
 (5, 'pool dinas', '', 'Roda 4', 'KT 8455 BZ', '4D56BT2889', 'MMBJNK7404D080337', '2004', '0', 'APBD', '-', '', '2022-10-15 23:56:02', '2022-10-15 23:56:02', NULL),
 (6, 'Pool KTNA', '', 'Roda 4', 'KT 1486 BZ', 'WLAT -745276', 'MNBLS406WH11929', '2006', '322500000', 'APBD', '-', '', '2022-10-16 00:09:02', '2022-10-16 00:09:02', NULL),
 (7, 'Ir. Diah Adiaty Yahya, M.MT', '', 'Roda 4', 'KT 1716 BZ', 'DD38014', 'MHFMIBA3J8K113415', '2008', '137385000', 'APBD', '-', '', '2022-10-16 00:14:27', '2022-10-16 00:14:27', NULL),
@@ -234,7 +234,8 @@ INSERT INTO `dafken` (`id`, `nama_pemegang`, `merk_kendaraan`, `jenis_kendaraan`
 (74, 'Pool dinas', '', 'Roda 2', 'KT 4920 MZ', '-', '-', '2009', '0', 'APBD', 'rusak ringan', '', '2022-11-05 06:52:05', '2022-11-05 06:52:38', NULL),
 (75, 'Pool dinas', '', 'Roda 2', 'KT 4926 MZ', '-', '-', '2009', '0', 'APBD', 'rusak ringan', '', '2022-11-05 06:53:31', '2022-11-05 06:53:31', NULL),
 (76, 'Pool dinas', '', 'Roda 2', 'KT 4922 MZ', '-', '-', '2009', '0', 'APBD', 'rusak ringan', '', '2022-11-05 06:54:33', '2022-11-05 06:54:33', NULL),
-(77, 'siti mayasari', '', 'Roda 2', 'KT 4939 MZ', '-', '-', '-', '0', 'APBD', '-', '', '2022-11-05 06:55:13', '2022-11-05 06:55:13', NULL);
+(77, 'siti mayasari', '', 'Roda 2', 'KT 4939 MZ', '-', '-', '-', '0', 'APBD', '-', '', '2022-11-05 06:55:13', '2022-11-05 06:55:13', NULL),
+(78, 'lidya', 'honda beat', 'Roda 2', 'KT 2426 NE', '1234567', '1234567', '2017', '21000000', 'APBD', 'baik', '1670426575.png', '2022-12-07 07:22:55', '2022-12-07 07:22:55', NULL);
 
 -- --------------------------------------------------------
 
@@ -529,7 +530,7 @@ ALTER TABLE `blmbayar`
 -- AUTO_INCREMENT for table `dafken`
 --
 ALTER TABLE `dafken`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
