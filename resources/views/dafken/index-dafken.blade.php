@@ -106,16 +106,19 @@
                     <td>Rp. {{ number_format($item->harga_perolehan) }}</td>
                     <td>{{ $item->sumber_dana}}</td>
                     <td>{{ $item->keterangan}}</td>
-                    <td><a href="{{asset('foto_fisik/'.$item->foto_fisik)}}">{{ $item->foto_fisik}}</a></td>
-
-
+                    <td>
+                        @if($item->foto_fisik)
+                            <a target="blank" href="{{asset('foto_fisik/'.$item->foto_fisik)}}">Lihat Foto</a>
+                        @else
+                            <a>Tidak ada Foto</a>
+                        @endif
+                    </td>
                     <td>
                         @if(auth()->user()->level == "admin")
                         <center>
                             <a href="{{ url('edit-dafken', $item->id) }}"><i class="fas fa-edit"></i></a>
                             |
-                            <a href="{{ url('delete-dafken', $item->id) }}"><i class="fas fa-trash-alt"
-                                    style="color: red"></i></a>
+                            <a href="{{ url('delete-dafken', $item->id) }}"><i class="fas fa-trash-alt" style="color: red"></i></a>
                         </center>
                         @endif
                     </td>

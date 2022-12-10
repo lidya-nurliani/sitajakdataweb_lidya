@@ -36,7 +36,7 @@ class DafkenController extends Controller
     public function store(Request $request)
     {
       
-        $fileName = time().'.'.$request->foto_fisik->extension();
+        $fileName = time().'.'.$request->foto_fisik->extension();  
         $request->foto_fisik->move(public_path('foto_fisik'), $fileName);
 
         $dafken = new Dafken;
@@ -89,14 +89,22 @@ class DafkenController extends Controller
     public function update(Request $request, $id)
     {
 
-       if(Request()->hasFile('foto_fisik')) {
-            $file = Request()->file('foto_fisik');
-            $fileName = Request()->foto_fisik.'.'.$request->extension();
-            $file->move(public_path('foto_fisik'), $fileName);
-       }
+        $fileName = time().'.'.$request->foto_fisik->extension();  
+        $request->foto_fisik->move(public_path('foto_fisik'), $fileName);
 
         $dafken = Dafken::findorfail($id);
-        $dafken->update($request->all());
+        $dafken->nama_pemegang = $request->nama_pemegang;
+        $dafken->merk_kendaraan = $request->merk_kendaraan;
+        $dafken->jenis_kendaraan = $request->jenis_kendaraan;
+        $dafken->no_polisi = $request->no_polisi;
+        $dafken->no_mesin = $request->no_mesin;
+        $dafken->no_rangka = $request->no_rangka;
+        $dafken->tahun = $request->tahun;
+        $dafken->harga_perolehan = $request->harga_perolehan;
+        $dafken->sumber_dana = $request->sumber_dana;
+        $dafken->keterangan = $request->keterangan;
+        $dafken->foto_fisik = $fileName;
+        $dafken->update();
 
         return redirect ('index-dafken')->with('toast_success', 'Data Berhasil Diubah!');
         // dd($request->all());
