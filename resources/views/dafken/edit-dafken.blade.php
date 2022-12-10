@@ -31,7 +31,7 @@
 </div>
 
 <div class="card-body">
-    <form action="{{ url('update-dafken', $dafken->id) }}" method="post">
+    <form action="{{ url('update-dafken', $dafken->id) }}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
             <input type="text" id="nama_pemegang" name="nama_pemegang" class="form-control" placeholder="Nama Pemegang"
