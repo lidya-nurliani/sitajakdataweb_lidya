@@ -88,7 +88,7 @@
                     <th>harga perolehan</th>
                     <th>sumber dana</th>
                     <th>keterangan</th>
-                    <th>foto fisik</th>
+                    <th>foto fisik kendaraan</th>
                     <th>Aksi</th>
                 </tr>
               </thead>
