@@ -70,6 +70,11 @@
                 <div class="form-group">
                     <input type="text" id="keterangan" name="keterangan" class="form-control" placeholder="keterangan">
                 </div>
+
+                <div class="form-group">
+                    <input type="file" id="foto_stnk" name="foto_stnk" class="form-control" placeholder="foto stnk">
+                </div>
+
                 <div class="form-group">
                     <button type="submit" class="btn btn-success">Simpan Data</button>
                 </div>

@@ -38,6 +38,10 @@ class BayarpajakController extends Controller
      */
     public function store(Request $request)
     {
+
+        $fileName = time().'.'.$request->foto_stnk->extension();  
+        $request->foto_stnk->move(public_path('foto_stnk'), $fileName);
+
         $bayarpajak = new Bayarpajak;
         $bayarpajak->unit_kerja = $request->unit_kerja;
         $bayarpajak->dafken_id = $request->dafken_id;
@@ -45,6 +49,7 @@ class BayarpajakController extends Controller
         $bayarpajak->pemegang = $request->pemegang;
         $bayarpajak->tgl_bayar = $request->tgl_bayar;
         $bayarpajak->keterangan = $request->keterangan;
+        $bayarpajak->foto_stnk = $fileName;
         $bayarpajak->save();
 
         return redirect ('index-bayarpajak')->with('toast_success', 'data berhasil Tersimpan!');
@@ -83,10 +88,22 @@ class BayarpajakController extends Controller
      */
     public function update(Request $request, $id)
     {
+
+        $fileName = time().'.'.$request->foto_stnk->extension();  
+        $request->foto_stnk->move(public_path('foto_stnk'), $fileName);
+
         $bayarpajak = Bayarpajak::findorfail($id);
-        $bayarpajak->update($request->all());
+        $bayarpajak->unit_kerja = $request->unit_kerja;
+        $bayarpajak->dafken_id = $request->dafken_id;
+        $bayarpajak->pembayaran_pajak = $request->pembayaran_pajak;
+        $bayarpajak->pemegang = $request->pemegang;
+        $bayarpajak->tgl_bayar = $request->tgl_bayar;
+        $bayarpajak->keterangan = $request->keterangan;
+        $bayarpajak->foto_stnk = $fileName;
+        $bayarpajak->update();
 
         return redirect ('index-bayarpajak')->with('toast_success', 'Data Berhasil Diubah!');
+        // dd($request->all());
     }
 
     /**

@@ -73,6 +73,12 @@
             <input type="text" id="keterangan" name="keterangan" class="form-control" placeholder="keterangan"
                 value="{{ $bayarpajak->keterangan }}">
         </div>
+
+        <div class="form-group">
+            <input type="file" id="foto_stnk" name="foto_stnk" class="form-control" placeholder="foto stnk"
+                value="{{ $bayarpajak->foto_stnk }}">
+        </div>
+
         <div class="form-group">
             <button type="submit" class="btn btn-primary">Ubah Data</button>
         </div>

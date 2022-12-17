@@ -57,6 +57,7 @@
             @endif
         </div>
         <div class="card-body">
+        <div style="overflow-x:auto">
             <table id="example1" class="table table-bordered">
               <thead>
                 <tr>
@@ -68,6 +69,7 @@
                     <th>tgl bayar</th>
                     <th>pemegang</th>
                     <th>keterangan</th>
+                    <th>foto STNK/BPKB kendaraan</th>
                     <th>Aksi</th>
                 </tr>
               </thead>
@@ -83,6 +85,13 @@
                     <td>{{ $item->pemegang }}</td>
                     <td>{{ $item->keterangan }}</td>
                     <td>
+                        @if($item->foto_stnk)
+                            <a target="blank" href="{{asset('foto_stnk/'.$item->foto_stnk)}}">Lihat Foto</a>
+                        @else
+                            <a>Tidak ada Foto</a>
+                        @endif
+                    </td>
+                    <td>
                         @if(auth()->user()->level == "admin")
                         <center>
                             <a href="{{ url('edit-bayarpajak', $item->id) }}"><i class="fas fa-edit"></i></a>
@@ -96,6 +105,7 @@
                 @endforeach
               </tbody>
             </table>
+        </div>
         </div>
     </div>
 </div>

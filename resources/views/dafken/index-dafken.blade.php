@@ -72,8 +72,9 @@
             @endif
         </div>
 
-        <div style="overflow-x:auto">
+        
         <div class="card-body">
+        <div style="overflow-x:auto">
             <table id="example1" class="table table-bordered">
               <thead>
                 <tr>
@@ -127,7 +128,8 @@
               </tbody>
             </table>
         </div>
-    </div>
+        </div>
+
 </div>
 </div>
 <!-- /.content -->
