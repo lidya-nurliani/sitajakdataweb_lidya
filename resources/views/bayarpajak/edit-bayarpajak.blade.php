@@ -30,7 +30,7 @@
 </div>
 
 <div class="card-body">
-    <form action="{{ url('update-bayarpajak', $bayarpajak->id) }}" method="post">
+    <form action="{{ url('update-bayarpajak', $bayarpajak->id) }}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
             <select id="unit_kerja" name="unit_kerja" class="form-control" placeholder="Unit kerja"
