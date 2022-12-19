@@ -20,10 +20,10 @@
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="{{ route('home') }}" class="nav-link">Home</a>
+                    <a href="{{ route('home') }}" class="nav-link"><font color="black">Home</font></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="#" class="nav-link">Dinas Pangan, Tanaman Pangan dan Hortikultura</a>
+                    <a href="#" class="nav-link"><font color="black">Dinas Pangan, Tanaman Pangan dan Hortikultura</font></a>
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">
@@ -44,7 +44,7 @@
             <div class="sidebar">
                 <div class="user-panel mt-4 pb-4 mb-4 d-flex">
                     <div class="image">
-                        <i class="fas fa-solid fa-user-tie"></i>
+                        <i class="fas fa-solid fa-user-tie mt-2"></i>
                     </div>
                     <div class="info">
                             <a href="#" class="d-block">
@@ -59,17 +59,19 @@
                         data-accordion="false">
                         <li class="nav-item">
                             <a href="{{ route('home') }}" class="nav-link ">
-                                <i class="fas fa-home"></i>
+                               
                                 <p>
-                                    <font color="yellow">Dashboard</font>
+                                    <font color="white"> <i class="fas fa-home "></i>Dashboard</font>
                                 </p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link ">
-                                <i class="fas fa-user"></i>
+                               
                                 <p>
-                                    <font color="white">Daftar Kendaraan</font>
+                                    <font color="white">
+                                    <i class="fas fa-users"></i>    
+                                    Daftar Kendaraan</font>
                                     <i class="right fas fa-angle-left"></i>
                                 </p>
                             </a>
@@ -87,9 +89,11 @@
 
                         <li class="nav-item">
                             <a href="" class="nav-link ">
-                                <i class="fas fa-users"></i>
+                               
                                 <p>
-                                    <font color="white">Pembayar Pajak STNK</font>
+                                    <font color="white"> 
+                                        <i class="fas fa-calculator"></i>
+                                    Pembayar Pajak STNK</font>
                                     <i class="right fas fa-angle-left"></i>
                                 </p>
                             </a>
@@ -104,7 +108,9 @@
                                     </a>
                                     <a href="{{ route('index-blmbayar') }}" class="nav-link ">
                                         <i class="fas fa-file-alt"></i>
-                                        <p>Data Pembayar Selanjutnya</p>
+                                        <p>
+                                        <font color="white">Data Pembayar Selanjutnya</font>
+                                        </p>
                                     </a>
                                 </li>
                             </ul>
@@ -112,9 +118,11 @@
 
                         <li class="nav-item">
                             <a href="#" class="nav-link ">
-                                <i class="fas fa-table"></i>
+                                
                                 <p>
-                                    <font color="white">Surat kuasa</font>
+                                    <font color="white">
+                                    <i class="fas fa-envelope"></i>
+                                     Surat kuasa</font>
                                     <i class="right fas fa-angle-left"></i>
                                 </p>
                             </a>
@@ -122,7 +130,7 @@
                                 <li class="nav-item">
                                     <a href="{{ route('index-suratkuasa') }}" class="nav-link ">
                                         <i class="fas fa-file-alt"></i>
-                                        <p>Surat kuasa</p>
+                                        <p><font color="white">Surat kuasa</font></p>
                                     </a>
                                 </li>
                             </ul>
@@ -130,18 +138,19 @@
 
                         <li class="nav-item">
                             <a href="#" class="nav-link ">
-                                <i class="fas fa-table"></i>
-                                <p>
-                                <font color="white">Perbaruan NOPOL Kendaraan</font>
+                            <font color="white">
+                                 <i class="fas fa-calendar-alt"></i>
+                                <p>Perbaruan NOPOL Kendaraan</font>
                                 <i class="right fas fa-angle-left"></i>
                                 </p>
+                                
                                 
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
                                     <a href="{{ route('index-perbaruanplat') }}" class="nav-link ">
                                         <i class="fas fa-file-alt"></i>
-                                        <p>Perbaruan Plat</p>
+                                        <p><font color="white">Perbaruan Plat</font></p>
                                     </a>
                                 </li>
                             </ul>

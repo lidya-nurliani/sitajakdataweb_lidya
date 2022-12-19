@@ -18,16 +18,13 @@
 
         <title>SITAJAKDATA</title>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
         <!-- Styles -->
        
         <style>
 
 
             body {
-                background-image: url(AdminLte/dist/img/bgnavy.png);
+                background-image: url(AdminLte/dist/img/3.png);
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-position: center;
@@ -35,26 +32,24 @@
                 height: 100%;
                 
                 font-family: 'Nunito', sans-serif;
+                
             }
-
-
-            .button {
-                border: none;
-                color: white;
-                padding: 15px 32px;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 16px;
-                margin: 4px 2px;
-                cursor: pointer;
-            }
-
-            .button1 {background-color: #C0C0C0;} /* white */
 
             .p1 {
                 font-family: "times New Roman", Times, serif;
             }
+
+            button{
+                font-family: sans-serif;
+                font-size: 15px;
+                background: #127bcb;
+                color: white;
+                border: white 3px solid;
+                border-radius: 5px;
+                padding: 12px 20px;
+                margin-top: 10px;
+            }
+
         </style>
     </head>
 
@@ -74,26 +69,24 @@
         
             
             <center>
-            <button class="button button1">
+            
+            <button>
                 @if (Route::has('login'))
-
-                <div class="pull-right">
                 @auth
-                 <a href="{{ url('/home') }} ">home</a>
-                </div>
-
+                 <a style="text-decoration:none"  href="{{ url('/home') }} ">
+                 <font color="white">home</font></a>
+              
+                 <button>
                 @else
-                <div class="pull-right">
-                <a href="{{ route('login') }}">Log in</a>
-                </div>
+                <a style="text-decoration:none" href="{{ route('login') }}" > <font color="white">Log in</font></a>
                 </button>
+             
                 
 
-                <button class="button button1">
+                <button>
                 @if (Route::has('register'))
-                <div class="pull-right">
-                <a href="{{ route('register') }}" >Register</a>
-                 </div>
+        
+                <a style="text-decoration:none" href="{{ route('register') }} " ><font color="white">Register</font></a>
                  @endif </button>
 
 

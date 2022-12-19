@@ -126,7 +126,7 @@ $(function(){
     <div class="row">
 
         <div class="col-lg-3 col-xs-6">
-            <div class="small-box bg-cyan">
+            <div class="small-box bg-blue">
                 <div class="inner">
                     <span class="info-box-number">
                         <h3 align="center">{{$dafken}}</h3>
@@ -141,7 +141,7 @@ $(function(){
         </div>
 
         <div class="col-lg-3 col-xs-6">
-            <div class="small-box bg-cyan">
+            <div class="small-box bg-blue">
                 <div class="inner">
                     <span class="info-box-number">
                         <h3 align="center">{{$bayarpajak}}</h3>
@@ -157,7 +157,7 @@ $(function(){
 
         <div class="col-lg-3 col-xs-6">
 
-            <div class="small-box bg-cyan">
+            <div class="small-box bg-blue">
                 <div class="inner">
                     <span class="info-box-number">
                         <h3 align="center">{{$blmbayar}}</h3>
@@ -173,7 +173,7 @@ $(function(){
 
         <div class="col-lg-3 col-xs-6">
 
-            <div class="small-box bg-cyan">
+            <div class="small-box bg-blue">
                 <div class="inner">
                     <span class="info-box-number">
                         <h3 align="center">{{$suratkuasa}}</h3>
