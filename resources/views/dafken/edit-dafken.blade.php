@@ -34,17 +34,20 @@
     <form action="{{ url('update-dafken', $dafken->id) }}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
+        <label>Nama pemegang</label>
             <input type="text" id="nama_pemegang" name="nama_pemegang" class="form-control" placeholder="Nama Pemegang"
                 value="{{ $dafken->nama_pemegang }}">
         </div>
 
         <div class="form-group">
+        <label>Merk Kendaraan</label>
             <input type="text" id="merk_kendaraan" name="merk_kendaraan" class="form-control" placeholder="Merk Kendaraan"
                 value="{{ $dafken->merk_kendaraan }}">
         </div>
 
 
         <div class="form-group">
+        <label>Jenis Kendaraan</label>
             <select id="jenis_kendaraan" name="jenis_kendaraan" class="form-control" placeholder="Jenis Kendaraan"
                 value="{{ $dafken->jenis_kendaraan }}">
                 <option value="">Jenis Kendaraan</option>
@@ -53,26 +56,32 @@
             </select>
         </div>
         <div class="form-group">
+        <label>Nomor Polisi</label>
             <input type="text" id="no_polisi" name="no_polisi" class="form-control" placeholder="no polisi"
                 value="{{ $dafken->no_polisi }}">
         </div>
         <div class="form-group">
+        <label>Nomor Mesin</label>
             <input type="text" id="no_mesin" name="no_mesin" class="form-control" placeholder="no mesin"
                 value="{{ $dafken->no_mesin }}">
         </div>
         <div class="form-group">
+        <label>Nomor Rangka</label>
             <input type="text" id="no_rangka" name="no_rangka" class="form-control" placeholder="no rangka"
                 value="{{ $dafken->no_rangka }}">
         </div>
         <div class="form-group">
+        <label>Tahun</label>
             <input type="text" id="tahun" name="tahun" class="form-control" placeholder="tahun"
                 value="{{ $dafken->tahun }}">
         </div>
         <div class="form-group">
+        <label>Harga Perolehan</label>
             <input type="text" id="harga_perolehan" name="harga_perolehan" class="form-control"
                 placeholder="harga perolehan" value="{{ $dafken->harga_perolehan }}">
         </div>
         <div class="form-group">
+        <label>Sumber Dana</label>
             <select id="sumber_dana" name="sumber_dana" class="form-control" placeholder="sumber dana"
                 value="{{ $dafken->sumber_dana }}">
                 <option value="">Sumber dana</option>
@@ -81,11 +90,13 @@
             </select>
         </div>
         <div class="form-group">
+        <label>Keterangan</label>
             <input type="text" id="keterangan" name="keterangan" class="form-control" placeholder="keterangan"
                 value="{{ $dafken->keterangan }}">
         </div>
 
         <div class="form-group">
+        <label>Upload Foto Fisik Kendaraan</label>
             <input type="file" id="foto_fisik" name="foto_fisik" class="form-control" placeholder="foto fisik"
                 value="{{ $dafken->foto_fisik }}">
         </div>

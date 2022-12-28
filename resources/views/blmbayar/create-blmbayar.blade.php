@@ -24,6 +24,7 @@
             <form action="{{ route('simpan-blmbayar') }}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
+                <label>Pilih Bidang</label>
                     <select class="form-control select2" style="width : 100%;" name="unit_kerja" id="unit_kerja"
                         placeholder="Unit kerja">
                         <option value=""> Unit Kerja/Bidang</option>
@@ -42,7 +43,9 @@
                             Pengembangan Sumber Daya Manusia </option>
                     </select>
                 </div>
+
                 <div class="form-group">
+                <label>Data Kendaraan</label>
                     <select class="form-control select2" style="width : 100%;" name="dafken_id" id="dafken_id">
                         <option value=""> Daftar Kendaraan</option>
                         @foreach ($dafken as $item)
@@ -51,12 +54,15 @@
                         @endforeach
                     </select>
                 </div>
+
                 <div class="form-group">
                     <label>Tanggal Bayar selanjutnya</label>
                     <input type="date" id="tgl_bayar_selanjutnya" name="tgl_bayar_selanjutnya" class="form-control"
                         placeholder="tgl bayar">
                 </div>
+
                 <div class="form-group">
+                <label>Status Pemegang</label>
                     <select class="form-control select2" style="width : 100%;" name="pemegang" id="pemegang"
                         placeholder="Pemegang">
                         <option value=""> Pemegang</option>
@@ -64,9 +70,17 @@
                         <option value="Pasif"> Pasif</option>
                     </select>
                 </div>
+
                 <div class="form-group">
+                <label>Keterangan</label>
                     <input type="text" id="keterangan" name="keterangan" class="form-control" placeholder="keterangan">
                 </div>
+
+                <div class="form-group">
+                <label>Upload File STNK/BPKB</label>
+                    <input type="file" id="foto_stnk" name="foto_stnk" class="form-control" placeholder="foto stnk">
+                </div>
+                
                 <div class="form-group">
                     <button type="submit" class="btn btn-success">Simpan Data</button>
                 </div>

@@ -33,6 +33,7 @@
     <form action="{{ url('update-perbaruanplat', $perbaruanplat->id) }}" method="post">
         @csrf
         <div class="form-group">
+        <label>Data Kendaraan</label>
             <select class="form-control select2" style="width: 100%;" name="dafken_id" id="dafken_id">
                 <option value="">data kendaraan</option>
                 @foreach ($dafken as $item)
@@ -43,14 +44,17 @@
             </select>
         </div>
         <div class="form-group">
+        <label>Pergantian Plat / kali</label>
             <input type="text" id="pergantian_plat" name="pergantian_plat" class="form-control"
                 placeholder="pergantian plat" value="{{ $perbaruanplat->pergantian_plat }}">
         </div>
         <div class="form-group">
+        <label>Masa berganti</label>
             <input type="text" id="masa_berganti" name="masa_berganti" class="form-control" placeholder="masa berganti"
                 value="{{ $perbaruanplat->masa_berganti }}">
         </div>
         <div class="form-group">
+        <label>Status</label>
             <select class="form-control select2" style="width : 100%;" name="status" id="status" placeholder="Status">
                 <option value=""> Status</option>
                 <option value="sudah berganti"> sudah berganti</option>

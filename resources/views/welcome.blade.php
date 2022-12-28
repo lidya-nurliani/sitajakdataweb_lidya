@@ -83,11 +83,11 @@
              
                 
 
-                <button>
+                <!-- <button> 
                 @if (Route::has('register'))
         
                 <a style="text-decoration:none" href="{{ route('register') }} " ><font color="white">Register</font></a>
-                 @endif </button>
+                 @endif </button>-->
 
 
                  @endauth

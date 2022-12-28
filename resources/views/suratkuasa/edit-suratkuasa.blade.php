@@ -32,6 +32,7 @@
     <form action="{{ url('update-suratkuasa', $suratkuasa->id) }}" method="post">
         @csrf
         <div class="form-group">
+        <label>Pilih Data Kendaraan</label>
             <select class="form-control select2" style="width: 100%;" name="dafken_id" id="dafken_id">
                 <option value="">daftar kendaraan</option>
                 @foreach ($dafken as $item)

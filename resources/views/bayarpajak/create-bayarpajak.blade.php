@@ -24,6 +24,7 @@
             <form action="{{ route('simpan-bayarpajak') }}" method="post" enctype="multipart/form-data">
                 {{csrf_field() }}
                 <div class="form-group">
+                <label>Pilih Bidang</label>
                     <select class="form-control select2" style="width : 100%;" name="unit_kerja" id="unit_kerja"
                         placeholder="Unit kerja">
                         <option value=""> Unit Kerja/Bidang</option>
@@ -43,6 +44,7 @@
                     </select>
                 </div>
                 <div class="form-group">
+                <label>Data Kendaraan</label>
                     <select class="form-control select2" style="width : 100%;" name="dafken_id" id="dafken_id">
                         <option value=""> Daftar Kendaraan</option>
                         @foreach ($dafken as $item)
@@ -52,6 +54,7 @@
                     </select>
                 </div>
                 <div class="form-group">
+                <label>Jumlah Pembayaran (Rp)</label>
                     <input type="text" id="pembayaran_pajak" name="pembayaran_pajak" class="form-control"
                         placeholder="pembayaran pajak">
                 </div>
@@ -60,6 +63,7 @@
                     <input type="date" id="tgl_bayar" name="tgl_bayar" class="form-control" placeholder="tgl bayar">
                 </div>
                 <div class="form-group">
+                <label>Status Pemegang</label>
                     <select class="form-control select2" style="width : 100%;" name="pemegang" id="pemegang"
                         placeholder="Pemegang">
                         <option value=""> Pemegang</option>
@@ -68,10 +72,12 @@
                     </select>
                 </div>
                 <div class="form-group">
+                <label>Keterangan Pembayaran</label>
                     <input type="text" id="keterangan" name="keterangan" class="form-control" placeholder="keterangan">
                 </div>
 
                 <div class="form-group">
+                <label>Upload File STNK/BPKB</label>
                     <input type="file" id="foto_stnk" name="foto_stnk" class="form-control" placeholder="foto stnk">
                 </div>
 

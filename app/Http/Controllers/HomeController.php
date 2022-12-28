@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\dafken;
-use App\Models\blmbayar;
-use App\Models\bayarpajak;
-use App\Models\suratkuasa;
-use App\Models\perbaruanplat;
+use App\Models\Dafken;
+use App\Models\Blmbayar;
+use App\Models\Bayarpajak;
+use App\Models\Suratkuasa;
+use App\Models\Perbaruanplat;
 use DB;
 
 class HomeController extends Controller

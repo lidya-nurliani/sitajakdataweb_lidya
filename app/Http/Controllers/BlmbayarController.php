@@ -38,12 +38,17 @@ class BlmbayarController extends Controller
      */
     public function store(Request $request)
     {
+
+        $fileName = time().'.'.$request->foto_stnk->extension();  
+        $request->foto_stnk->move(public_path('foto_stnk'), $fileName);
+
         $blmbayar = new Blmbayar;
         $blmbayar->unit_kerja = $request->unit_kerja;
         $blmbayar->dafken_id = $request->dafken_id;
         $blmbayar->tgl_bayar_selanjutnya = $request->tgl_bayar_selanjutnya;
         $blmbayar->pemegang = $request->pemegang;
         $blmbayar->keterangan = $request->keterangan;
+        $blmbayar->foto_stnk = $fileName;
         $blmbayar->save();
 
         return redirect ('index-blmbayar')->with('toast_success', 'data berhasil Tersimpan!');
@@ -82,8 +87,19 @@ class BlmbayarController extends Controller
      */
     public function update(Request $request, $id)
     {
+
+        $fileName = time().'.'.$request->foto_stnk->extension();  
+        $request->foto_stnk->move(public_path('foto_stnk'), $fileName);
+
         $blmbayar = Blmbayar::findorfail($id);
-        $blmbayar->update($request->all());
+        $blmbayar->unit_kerja = $request->unit_kerja;
+        $blmbayar->dafken_id = $request->dafken_id;
+        $blmbayar->tgl_bayar_selanjutnya = $request->tgl_bayar_selanjutnya;
+        $blmbayar->pemegang = $request->pemegang;
+        $blmbayar->keterangan = $request->keterangan;
+        $blmbayar->foto_stnk = $fileName;
+        $blmbayar->update();
+        
 
         return redirect ('index-blmbayar')->with('toast_success', 'Data Berhasil Diubah!');
     }

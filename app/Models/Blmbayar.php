@@ -10,7 +10,7 @@ class Blmbayar extends Model
     use HasFactory;
     protected $table = 'blmbayar';
     protected $primarykey = "id";
-    protected $fillable = ['unit_kerja','dafken_id', 'tgl_bayar_selanjutnya', 'pemegang', 'keterangan'];
+    protected $fillable = ['unit_kerja','dafken_id', 'tgl_bayar_selanjutnya', 'pemegang', 'keterangan','foto_stnk'];
 
     public function dafken() {
         return $this->belongsTo(Dafken::class, 'dafken_id');

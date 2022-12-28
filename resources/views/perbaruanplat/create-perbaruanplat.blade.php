@@ -25,6 +25,7 @@
             <form action="{{ route('simpan-perbaruanplat') }}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
+                <label>Data Kendaraan</label>
                     <select class="form-control select2" style="width : 100%;" name="dafken_id" id="dafken_id">
                         <option value=""> Data Kendaraan</option>
                         @foreach ($dafken as $item)
@@ -34,14 +35,17 @@
                     </select>
                 </div>
                 <div class="form-group">
+                <label>Pergantian plat / kali</label>
                     <input type="text" id="pergantian_plat" name="pergantian_plat" class="form-control"
                         placeholder="pergantian plat">
                 </div>
                 <div class="form-group">
+                <label>Masa Berganti</label>
                     <input type="text" id="masa_berganti" name="masa_berganti" class="form-control"
                         placeholder="masa berganti">
                 </div>
                 <div class="form-group">
+                <label>Status</label>
                     <select class="form-control select2" style="width : 100%;" name="status" id="status"
                         placeholder="Status">
                         <option value=""> Status</option>
