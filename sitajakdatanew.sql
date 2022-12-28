@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 19, 2022 at 05:27 PM
+-- Generation Time: Dec 28, 2022 at 07:14 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -46,44 +46,39 @@ CREATE TABLE `bayarpajak` (
 --
 
 INSERT INTO `bayarpajak` (`id`, `unit_kerja`, `dafken_id`, `pembayaran_pajak`, `tgl_bayar`, `pemegang`, `keterangan`, `foto_stnk`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(8, 'Sekretariat', 3, '300000', '2022-01-02', 'Pasif', 'sudah membayar', '1671331304.png', '2022-10-20 07:26:52', '2022-12-17 18:41:45', NULL),
-(9, 'Bidang TP', 4, '250000', '2022-01-03', 'Pasif', 'sudah membayar', '', '2022-10-20 07:31:43', '2022-10-20 07:31:43', NULL),
-(10, 'Bidang Hortik', 5, '250000', '2022-01-06', 'Pasif', 'sudah membayar', '', '2022-10-20 07:33:01', '2022-10-20 07:33:01', NULL),
-(11, 'Bidang TP', 6, '200000', '2022-01-12', 'Aktif', 'sudah membayar', '', '2022-10-20 07:33:57', '2022-10-20 07:36:47', NULL),
-(12, 'Bidang KKP', 7, '300000', '2022-01-17', 'Aktif', 'sudah membayar', '', '2022-10-20 07:37:44', '2022-10-20 07:37:44', NULL),
-(13, 'Bidang KDP', 8, '220000', '2022-02-05', 'Aktif', 'sudah membayar', '', '2022-10-20 07:38:39', '2022-10-20 07:38:39', NULL),
-(14, 'Bidang Hortik', 9, '200000', '2022-02-08', 'Aktif', 'sudah membayar', '', '2022-10-20 07:39:31', '2022-10-20 07:39:31', NULL),
-(15, 'UPTD Balai Benih Induk Tanaman Pangan dan holtikultura', 10, '250000', '2022-02-11', 'Aktif', 'sudah membayar', '', '2022-10-20 07:40:32', '2022-10-20 07:40:32', NULL),
-(16, 'Bidang KKP', 11, '350000', '2022-02-22', 'Pasif', 'sudah membayar', '', '2022-10-20 07:41:17', '2022-10-20 07:41:17', NULL),
-(17, 'Bidang Hortik', 12, '300000', '2022-03-01', 'Aktif', 'sudah membayar', '', '2022-10-20 07:42:16', '2022-10-20 07:42:16', NULL),
-(18, 'Bidang TP', 13, '200000', '2022-03-04', 'Aktif', 'sudah membayar', '', '2022-10-20 07:43:21', '2022-10-20 07:43:21', NULL),
-(19, 'Bidang TP', 14, '250000', '2022-03-07', 'Aktif', 'sudah membayar', '', '2022-10-20 07:44:09', '2022-10-20 07:44:09', NULL),
-(20, 'Bidang Hortik', 15, '235000', '2022-03-17', 'Aktif', 'sudah membayar', '', '2022-10-20 07:44:47', '2022-10-20 07:44:47', NULL),
-(21, 'Bidang Hortik', 16, '200000', '2022-03-23', 'Pasif', 'sudah membayar', '', '2022-10-20 07:45:51', '2022-10-20 07:45:51', NULL),
-(22, 'UPTD Pengawasan dan Sertifikat Benih Tanaman Pangan dan Holtikultura', 17, '175000', '2022-04-06', 'Aktif', 'sudah membayar', '', '2022-10-20 07:47:04', '2022-10-20 07:47:04', NULL),
-(23, 'UPTD Proteksi Tanaman Pangan dan Holtikultura', 18, '200000', '2022-04-09', 'Aktif', 'sudah membayar', '', '2022-10-20 07:47:41', '2022-10-20 07:47:41', NULL),
-(24, 'Sekretariat', 19, '250000', '2022-04-10', 'Pasif', 'sudah membayar', '', '2022-10-20 07:48:26', '2022-10-20 07:48:26', NULL),
-(25, 'Sekretariat', 20, '250000', '2022-04-17', 'Aktif', 'sudah membayar', '', '2022-10-20 07:49:20', '2022-10-20 07:49:20', NULL),
-(26, 'Bidang KKP', 21, '300000', '2022-04-29', 'Aktif', 'sudah membayar', '', '2022-10-20 07:50:26', '2022-10-20 07:50:26', NULL),
-(27, 'UPTD Balai Penyusunan Pengembangan Sumber Daya Manusia', 22, '150000', '2022-04-30', 'Aktif', 'sudah membayar', '', '2022-10-20 07:51:26', '2022-10-20 07:51:26', NULL),
-(28, 'Sekretariat', 23, '250000', '2022-05-02', 'Pasif', 'sudah membayar', '', '2022-10-20 08:08:00', '2022-10-20 08:08:00', NULL),
-(29, 'UPTD Balai Benih Induk Tanaman Pangan dan holtikultura', 24, '300000', '2022-05-06', 'Aktif', 'sudah membayar', '', '2022-10-20 08:09:16', '2022-10-20 08:09:16', NULL),
-(30, 'Bidang TP', 25, '250000', '2022-05-22', 'Aktif', 'sudah membayar', '', '2022-10-20 08:11:45', '2022-10-20 08:11:45', NULL),
-(31, 'Bidang KDP', 26, '235000', '2022-05-26', 'Aktif', 'sudah membayar', '', '2022-10-20 08:12:35', '2022-10-20 08:12:35', NULL),
-(32, 'Bidang KKP', 27, '200000', '2022-06-01', 'Pasif', 'sudah membayar', '', '2022-10-20 08:14:00', '2022-10-20 08:14:00', NULL),
-(33, 'UPTD Balai Penyusunan Pengembangan Sumber Daya Manusia', 28, '250000', '2022-06-06', 'Aktif', 'sudah membayar', '', '2022-10-20 08:15:50', '2022-10-20 08:15:50', NULL),
-(34, 'UPTD Proteksi Tanaman Pangan dan Holtikultura', 29, '220000', '2022-06-17', 'Aktif', 'sudah membayar', '', '2022-10-20 08:17:42', '2022-10-20 08:17:42', NULL),
-(35, 'Bidang Hortik', 30, '235000', '2022-06-30', 'Pasif', 'sudah membayar', '', '2022-10-20 08:18:42', '2022-10-20 08:18:42', NULL),
-(36, 'Sekretariat', 31, '350000', '2022-07-04', 'Aktif', 'sudah membayar', '', '2022-10-20 08:19:23', '2022-10-20 08:19:23', NULL),
-(37, 'Bidang KDP', 32, '200000', '2022-07-08', 'Aktif', 'sudah membayar', '', '2022-10-20 08:20:16', '2022-10-20 08:20:16', NULL),
-(38, 'Sekretariat', 33, '350000', '2022-08-11', 'Pasif', 'sudah membayar', '', '2022-10-20 08:22:04', '2022-10-20 08:22:04', NULL),
-(39, 'Sekretariat', 34, '250000', '2022-08-16', 'Pasif', 'sudah membayar', '', '2022-10-20 08:23:45', '2022-10-20 08:23:45', NULL),
-(40, 'Sekretariat', 35, '235000', '2022-09-07', 'Aktif', 'sudah membayar', '', '2022-10-20 08:24:44', '2022-10-20 08:24:44', NULL),
-(41, 'Sekretariat', 36, '220000', '2022-09-15', 'Aktif', 'sudah membayar', '', '2022-10-20 08:25:17', '2022-10-20 08:25:17', NULL),
-(42, 'Sekretariat', 37, '300000', '2022-09-29', 'Aktif', 'sudah membayar', '', '2022-10-20 08:26:01', '2022-10-20 08:26:01', NULL),
-(43, 'Bidang KKP', 38, '250000', '2022-09-29', 'Aktif', 'sudah membayar', '', '2022-10-20 08:26:51', '2022-10-20 08:26:51', NULL),
-(44, 'Bidang TP', 39, '220000', '2022-09-19', 'Aktif', 'sudah membayar', '', '2022-10-20 08:27:26', '2022-11-05 07:12:35', NULL),
-(45, 'Sekretariat', 40, '250000', '2022-09-23', 'Aktif', 'sudah membayar', '', '2022-10-20 08:27:54', '2022-11-05 07:11:52', NULL);
+(10, 'Sekretariat', 5, '250000', '2022-09-23', 'Aktif', 'belum membayar', '1672243902.png', '2022-10-20 07:33:01', '2022-12-28 08:11:42', NULL),
+(13, 'Sekretariat', 8, '220000', '2022-09-23', 'Aktif', 'belum membayar', '1672243985.png', '2022-10-20 07:38:39', '2022-12-28 08:13:05', NULL),
+(16, 'Sekretariat', 11, '350000', '2022-08-07', 'Aktif', 'belum membayar', '1672244060.png', '2022-10-20 07:41:17', '2022-12-28 08:14:20', NULL),
+(17, 'Sekretariat', 12, '300000', '2022-06-20', 'Aktif', 'belum membayar', '1672244108.png', '2022-10-20 07:42:16', '2022-12-28 08:15:08', NULL),
+(19, 'Bidang KKP', 14, '250000', '2022-08-01', 'Aktif', 'belum membayar', '1672245681.png', '2022-10-20 07:44:09', '2022-12-28 08:41:21', NULL),
+(20, 'Bidang TP', 15, '235000', '2022-08-02', 'Aktif', 'belum membayar', '1672245725.png', '2022-10-20 07:44:47', '2022-12-28 08:42:05', NULL),
+(23, 'Bidang KKP', 18, '200000', '2022-05-29', 'Aktif', 'belum membayar', '1672245793.png', '2022-10-20 07:47:41', '2022-12-28 08:43:13', NULL),
+(25, 'Sekretariat', 20, '250000', '2022-05-29', 'Aktif', 'belum membayar', '1672245849.png', '2022-10-20 07:49:20', '2022-12-28 08:44:09', NULL),
+(27, 'Bidang TP', 22, '150000', '2022-05-29', 'Aktif', 'belum membayar', '1672245970.png', '2022-10-20 07:51:26', '2022-12-28 08:46:10', NULL),
+(28, 'Sekretariat', 23, '250000', '2022-11-01', 'Aktif', 'belum membayar', '1672244164.png', '2022-10-20 08:08:00', '2022-12-28 08:16:04', NULL),
+(29, 'Sekretariat', 24, '300000', '2022-09-08', 'Aktif', 'belum membayar', '1672244233.png', '2022-10-20 08:09:16', '2022-12-28 08:17:13', NULL),
+(31, 'Sekretariat', 26, '235000', '2022-12-22', 'Aktif', 'belum membayar', '1672244292.png', '2022-10-20 08:12:35', '2022-12-28 08:18:12', NULL),
+(32, 'Bidang KDP', 27, '200000', '2022-12-21', 'Aktif', 'belum membayar', '1672244345.png', '2022-10-20 08:14:00', '2022-12-28 08:19:08', NULL),
+(38, '', 33, '350000', '2022-11-16', 'Aktif', 'belum membayar', '1672245406.png', '2022-10-20 08:22:04', '2022-12-28 08:36:46', NULL),
+(39, 'Sekretariat', 34, '250000', '2022-12-22', 'Aktif', 'belum membayar', '1672245454.png', '2022-10-20 08:23:45', '2022-12-28 08:37:34', NULL),
+(41, 'Sekretariat', 36, '220000', '2022-09-17', 'Aktif', 'belum membayar', '1672245508.png', '2022-10-20 08:25:17', '2022-12-28 08:38:28', NULL),
+(46, 'Sekretariat', 45, '250000', '2022-05-29', 'Aktif', 'belum membayar', '1672246054.png', '2022-12-28 08:47:34', '2022-12-28 08:47:34', NULL),
+(47, 'Bidang Hortik', 47, '250000', '2022-05-29', 'Aktif', 'belum membayar', '1672247196.png', '2022-12-28 09:06:36', '2022-12-28 09:06:36', NULL),
+(48, 'Sekretariat', 53, '250000', '2022-08-19', 'Pasif', 'belum membayar', '1672247526.png', '2022-12-28 09:12:06', '2022-12-28 09:12:06', NULL),
+(49, 'Bidang TP', 62, '300000', '2022-10-26', 'Aktif', 'belum membayar', '1672247698.png', '2022-12-28 09:14:58', '2022-12-28 09:14:58', NULL),
+(50, 'Sekretariat', 67, '200000', '2022-11-21', 'Aktif', 'belum membayar', '1672247774.png', '2022-12-28 09:16:14', '2022-12-28 09:16:14', NULL),
+(51, 'Bidang Hortik', 68, '350000', '2022-12-31', 'Aktif', 'belum membayar', '1672247819.png', '2022-12-28 09:16:59', '2022-12-28 09:16:59', NULL),
+(52, 'Bidang KDP', 69, '235000', '2022-11-06', 'Aktif', 'belum membayar', '1672247883.png', '2022-12-28 09:18:03', '2022-12-28 09:18:03', NULL),
+(53, 'Sekretariat', 70, '220000', '2022-11-05', 'Pasif', 'belum membayar', '1672247947.png', '2022-12-28 09:19:07', '2022-12-28 09:19:07', NULL),
+(54, 'Sekretariat', 71, '200000', '2022-11-06', 'Aktif', 'belum membayar', '1672247994.png', '2022-12-28 09:19:54', '2022-12-28 09:19:54', NULL),
+(55, 'Bidang TP', 72, '220000', '2022-11-05', 'Aktif', 'belum membayar', '1672248043.png', '2022-12-28 09:20:43', '2022-12-28 09:20:43', NULL),
+(56, 'Bidang KDP', 73, '350000', '2022-11-06', 'Aktif', 'belum membayar', '1672248103.png', '2022-12-28 09:21:43', '2022-12-28 09:21:43', NULL),
+(57, 'Sekretariat', 74, '350000', '2022-10-29', 'Aktif', 'belum membayar', '1672248156.png', '2022-12-28 09:22:36', '2022-12-28 09:22:36', NULL),
+(58, 'Sekretariat', 75, '300000', '2022-10-29', 'Aktif', 'belum membayar', '1672248438.png', '2022-12-28 09:27:18', '2022-12-28 09:27:18', NULL),
+(59, 'Sekretariat', 76, '220000', '2022-10-29', 'Aktif', 'belum membayar', '1672248500.png', '2022-12-28 09:28:20', '2022-12-28 09:28:20', NULL),
+(60, 'Bidang KDP', 77, '200000', '2022-11-06', 'Aktif', 'belum membayar', '1672248558.png', '2022-12-28 09:29:18', '2022-12-28 09:29:18', NULL),
+(61, 'Sekretariat', 48, '300000', '2022-05-29', 'Aktif', 'belum membayar', '1672248794.png', '2022-12-28 09:33:14', '2022-12-28 09:33:14', NULL),
+(62, 'Bidang KKP', 50, '300000', '2022-10-26', 'Aktif', 'belum membayar', '1672248852.png', '2022-12-28 09:34:12', '2022-12-28 09:34:12', NULL);
 
 -- --------------------------------------------------------
 
@@ -98,6 +93,7 @@ CREATE TABLE `blmbayar` (
   `tgl_bayar_selanjutnya` date NOT NULL,
   `pemegang` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `keterangan` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `foto_stnk` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL
@@ -107,37 +103,39 @@ CREATE TABLE `blmbayar` (
 -- Dumping data for table `blmbayar`
 --
 
-INSERT INTO `blmbayar` (`id`, `unit_kerja`, `dafken_id`, `tgl_bayar_selanjutnya`, `pemegang`, `keterangan`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(7, 'Bidang TP', 41, '2022-10-20', 'Aktif', 'sudah membayar', '2022-11-05 07:03:51', '2022-11-05 07:03:51', NULL),
-(8, 'Bidang TP', 42, '2022-10-25', 'Aktif', 'sudah membayar', '2022-11-05 07:04:33', '2022-11-05 07:04:33', NULL),
-(9, 'Bidang Hortik', 43, '2022-10-27', 'Aktif', 'sudah membayar', '2022-11-05 07:05:20', '2022-11-05 07:05:20', NULL),
-(10, 'Bidang KDP', 44, '2022-10-28', 'Aktif', 'sudah membayar', '2022-11-05 07:06:09', '2022-11-05 07:06:09', NULL),
-(11, 'Bidang TP', 45, '2022-11-06', 'Aktif', 'belum membayar', '2022-11-05 07:07:33', '2022-11-05 07:07:33', NULL),
-(12, 'Bidang KKP', 46, '2022-11-08', 'Aktif', 'belum membayar', '2022-11-05 07:08:16', '2022-11-05 07:08:16', NULL),
-(13, 'Bidang KDP', 47, '2022-11-10', 'Aktif', 'belum membayar', '2022-11-05 07:09:27', '2022-11-05 07:09:27', NULL),
-(14, 'Bidang KKP', 48, '2022-11-15', 'Aktif', 'belum membayar', '2022-11-05 07:14:07', '2022-11-05 07:14:07', NULL),
-(15, 'Bidang TP', 49, '2022-11-17', 'Aktif', 'belum membayar', '2022-11-05 07:14:48', '2022-11-05 07:14:48', NULL),
-(16, 'Bidang KKP', 50, '2022-11-21', 'Aktif', 'belum membayar', '2022-11-05 07:15:24', '2022-11-05 07:15:24', NULL),
-(17, 'Sekretariat', 51, '2022-11-20', 'Aktif', 'belum membayar', '2022-11-05 07:17:08', '2022-11-05 07:17:08', NULL),
-(18, 'Sekretariat', 52, '2022-11-25', 'Aktif', 'belum membayar', '2022-11-05 07:17:49', '2022-11-05 07:17:49', NULL),
-(19, 'Sekretariat', 53, '2022-11-25', 'Pasif', 'belum membayar', '2022-11-05 07:18:42', '2022-11-05 07:18:42', NULL),
-(20, 'Sekretariat', 61, '2022-11-25', 'Pasif', 'belum membayar', '2022-11-05 07:19:15', '2022-11-05 07:19:15', NULL),
-(21, 'Bidang Hortik', 62, '2022-11-27', 'Aktif', 'belum membayar', '2022-11-05 07:19:52', '2022-11-05 07:19:52', NULL),
-(22, 'Bidang TP', 63, '2022-11-29', 'Aktif', 'belum membayar', '2022-11-05 07:20:31', '2022-11-05 07:20:31', NULL),
-(23, 'Bidang KDP', 64, '2022-11-29', 'Aktif', 'belum membayar', '2022-11-05 07:21:10', '2022-11-05 07:21:10', NULL),
-(24, 'Sekretariat', 65, '2022-12-01', 'Aktif', 'belum membayar', '2022-11-05 07:21:39', '2022-11-05 07:21:39', NULL),
-(25, 'Sekretariat', 66, '2022-12-02', 'Aktif', 'belum membayar', '2022-11-05 07:22:09', '2022-11-05 07:22:09', NULL),
-(26, 'Sekretariat', 67, '2022-12-05', 'Aktif', 'belum membayar', '2022-11-05 07:22:41', '2022-11-05 07:22:41', NULL),
-(27, 'Bidang Hortik', 68, '2022-12-06', 'Aktif', 'belum membayar', '2022-11-05 07:23:14', '2022-11-05 07:23:14', NULL),
-(28, 'Bidang Hortik', 69, '2022-12-08', 'Aktif', 'belum membayar', '2022-11-05 07:23:48', '2022-11-05 07:23:48', NULL),
-(29, 'Bidang KKP', 70, '2022-12-10', 'Aktif', 'belum membayar', '2022-11-05 07:24:50', '2022-11-05 07:24:50', NULL),
-(30, 'Sekretariat', 71, '2022-12-14', 'Aktif', 'belum membayar', '2022-11-05 07:25:17', '2022-11-05 07:25:17', NULL),
-(31, 'Bidang TP', 72, '2022-12-22', 'Aktif', 'belum membayar', '2022-11-05 07:26:04', '2022-11-05 07:26:04', NULL),
-(32, 'Bidang KDP', 73, '2022-12-23', 'Aktif', 'belum membayar', '2022-11-05 07:26:50', '2022-11-05 07:26:50', NULL),
-(33, 'Sekretariat', 74, '2022-12-25', 'Pasif', 'belum membayar', '2022-11-05 07:27:26', '2022-11-05 07:27:26', NULL),
-(34, 'Sekretariat', 75, '2022-12-25', 'Pasif', 'belum membayar', '2022-11-05 07:27:55', '2022-11-05 07:27:55', NULL),
-(35, 'Sekretariat', 76, '2022-12-25', 'Pasif', 'belum membayar', '2022-11-05 07:28:29', '2022-11-05 07:28:29', NULL),
-(36, 'Bidang Hortik', 77, '2022-12-28', 'Aktif', 'belum membayar', '2022-11-05 07:28:58', '2022-11-05 07:28:58', NULL);
+INSERT INTO `blmbayar` (`id`, `unit_kerja`, `dafken_id`, `tgl_bayar_selanjutnya`, `pemegang`, `keterangan`, `foto_stnk`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(7, 'Bidang TP', 41, '2022-05-29', 'Aktif', 'belum membayar', '1672250365.png', '2022-11-05 07:03:51', '2022-12-28 09:59:25', NULL),
+(8, 'Bidang TP', 42, '2023-05-29', 'Aktif', 'belum membayar', '', '2022-11-05 07:04:33', '2022-12-28 07:52:30', NULL),
+(9, 'Bidang KKP', 43, '2023-05-29', 'Aktif', 'belum membayar', '', '2022-11-05 07:05:20', '2022-12-28 07:53:17', NULL),
+(10, 'Bidang TP', 44, '2023-05-29', 'Aktif', 'belum membayar', '', '2022-11-05 07:06:09', '2022-12-28 07:53:50', NULL),
+(12, 'Bidang Hortik', 46, '2023-05-29', 'Aktif', 'belum membayar', '', '2022-11-05 07:08:16', '2022-12-28 07:54:23', NULL),
+(17, 'Sekretariat', 51, '2023-12-17', 'Aktif', 'belum membayar', '', '2022-11-05 07:17:08', '2022-12-28 07:55:40', NULL),
+(22, 'Sekretariat', 63, '2023-10-26', 'Aktif', 'belum membayar', '', '2022-11-05 07:20:31', '2022-12-28 07:56:32', NULL),
+(23, 'Bidang TP', 64, '2023-10-26', 'Aktif', 'belum membayar', '', '2022-11-05 07:21:10', '2022-12-28 07:57:07', NULL),
+(24, 'Sekretariat', 65, '2022-12-01', 'Aktif', 'belum membayar', '', '2022-11-05 07:21:39', '2022-11-05 07:21:39', NULL),
+(25, 'Sekretariat', 66, '2022-12-02', 'Aktif', 'belum membayar', '', '2022-11-05 07:22:09', '2022-11-05 07:22:09', NULL),
+(37, 'Sekretariat', 6, '2023-08-23', 'Aktif', 'belum membayar', '', '2022-12-28 07:10:38', '2022-12-28 07:10:38', NULL),
+(38, 'Bidang KKP', 7, '2023-09-24', 'Aktif', 'belum membayar', '', '2022-12-28 07:11:47', '2022-12-28 07:11:47', NULL),
+(39, 'Sekretariat', 9, '2023-01-13', 'Aktif', 'belum membayar', '', '2022-12-28 07:12:39', '2022-12-28 07:12:39', NULL),
+(40, 'Sekretariat', 10, '2023-02-14', 'Aktif', 'belum membayar', '', '2022-12-28 07:14:26', '2022-12-28 07:14:26', NULL),
+(41, 'Sekretariat', 25, '2023-02-14', 'Aktif', 'belum membayar', '', '2022-12-28 07:15:42', '2022-12-28 07:15:42', NULL),
+(42, 'Sekretariat', 28, '2023-05-06', 'Aktif', 'belum membayar', '', '2022-12-28 07:17:40', '2022-12-28 07:17:40', NULL),
+(43, 'UPTD Proteksi Tanaman Pangan dan Holtikultura', 29, '2023-11-10', 'Aktif', 'belum membayar', '', '2022-12-28 07:18:32', '2022-12-28 07:18:32', NULL),
+(44, 'Bidang Hortik', 30, '2023-11-11', 'Pasif', 'belum membayar', '', '2022-12-28 07:19:39', '2022-12-28 07:19:39', NULL),
+(45, 'Sekretariat', 31, '2023-11-19', 'Aktif', 'belum membayar', '', '2022-12-28 07:20:18', '2022-12-28 07:21:46', NULL),
+(46, 'Sekretariat', 32, '2023-11-19', 'Pasif', 'belum membayar', '', '2022-12-28 07:21:14', '2022-12-28 07:21:14', NULL),
+(47, 'Sekretariat', 35, '2023-11-19', 'Aktif', 'belum membayar', '', '2022-12-28 07:22:40', '2022-12-28 07:22:40', NULL),
+(48, 'Sekretariat', 37, '2023-01-10', 'Aktif', 'belum membayar', '', '2022-12-28 07:23:24', '2022-12-28 07:23:24', NULL),
+(49, 'Bidang KKP', 38, '2023-03-17', 'Aktif', 'belum membayar', '', '2022-12-28 07:24:27', '2022-12-28 07:24:27', NULL),
+(50, 'Bidang TP', 39, '2023-04-12', 'Aktif', 'belum membayar', '', '2022-12-28 07:25:14', '2022-12-28 07:25:14', NULL),
+(51, 'Sekretariat', 40, '2023-04-24', 'Aktif', 'belum membayar', '', '2022-12-28 07:25:57', '2022-12-28 07:25:57', NULL),
+(52, 'Bidang Hortik', 13, '2023-08-01', 'Aktif', 'belum membayar', '', '2022-12-28 07:27:16', '2022-12-28 07:27:16', NULL),
+(53, 'Bidang Hortik', 16, '2023-05-29', 'Pasif', 'belum membayar', '', '2022-12-28 07:30:43', '2022-12-28 07:30:43', NULL),
+(54, 'Bidang Hortik', 17, '2023-06-03', 'Aktif', 'belum membayar', '', '2022-12-28 07:49:22', '2022-12-28 07:49:22', NULL),
+(55, 'Sekretariat', 19, '2023-05-29', 'Pasif', 'belum membayar', '', '2022-12-28 07:50:07', '2022-12-28 07:50:07', NULL),
+(56, 'Bidang KKP', 21, '2023-05-29', 'Aktif', 'belum membayar', '', '2022-12-28 07:50:58', '2022-12-28 07:50:58', NULL),
+(57, 'Bidang Hortik', 49, '2023-05-29', 'Aktif', 'belum membayar', '', '2022-12-28 09:08:22', '2022-12-28 09:08:22', NULL),
+(58, 'Sekretariat', 52, '2023-08-13', 'Aktif', 'belum membayar', '', '2022-12-28 09:10:09', '2022-12-28 09:10:09', NULL);
 
 -- --------------------------------------------------------
 
@@ -219,7 +217,6 @@ INSERT INTO `dafken` (`id`, `nama_pemegang`, `merk_kendaraan`, `jenis_kendaraan`
 (51, 'Pool SEK', 'kawasaki ninja 250R', 'Roda 2', 'KT 4969 MZ', '-', '-', '2009', '67140000', 'APBD', '-', '1671460889.png', '2022-11-05 05:11:16', '2022-12-19 06:41:29', NULL),
 (52, 'hernita', 'vega ZR 110cc', 'Roda 2', 'KT 3557 B', '-', '-', '2009', '0', 'APBD', '-', '1671460936.png', '2022-11-05 05:12:10', '2022-12-19 06:42:16', NULL),
 (53, 'POOL dinas', 'bajaj pulsar 180 DTSI', 'Roda 2', 'KT 6521 BZ', 'DJGBSM60757', 'MD2DJ17D6ACM01415', '2010', '0', 'APBD', '-', '1671460982.png', '2022-11-05 05:13:32', '2022-12-19 06:43:02', NULL),
-(61, 'Pool dinas', 'bajaj pulsar 180 DTSI', 'Roda 2', 'KT 6521 BZ', 'DJGBSL49879', 'MD2DJ17D8ACL00568', '2010', '0', 'APBD', '-', '1671461017.png', '2022-11-05 06:33:28', '2022-12-19 06:43:37', NULL),
 (62, 'suriansyah', 'honda supra X 125', 'Roda 2', 'KT 6197 BZ', '-', '-', '2011', '17545000', 'APBD', '-', '1671461073.png', '2022-11-05 06:35:29', '2022-12-19 06:44:33', NULL),
 (63, 'umilia wati', 'honda supra X 125', 'Roda 2', 'KT 6202 BZ', '-', '-', '2011', '17545000', 'APBD', '-', '1671463491.png', '2022-11-05 06:39:01', '2022-12-19 07:24:51', NULL),
 (64, 'budi harsono', 'honda supra X 125', 'Roda 2', 'KT 6205 BZ', '-', '-', '2011', '17545000', 'APBD', '-', '1671463519.png', '2022-11-05 06:40:04', '2022-12-19 07:25:19', NULL),
@@ -368,7 +365,6 @@ INSERT INTO `perbaruanplat` (`id`, `dafken_id`, `pergantian_plat`, `masa_bergant
 (52, 51, '2 kali', '2024', 'belum berganti', '2022-11-05 23:45:23', '2022-11-05 23:45:23', NULL),
 (53, 52, '2 kali', '2024', 'belum berganti', '2022-11-05 23:45:49', '2022-11-05 23:45:49', NULL),
 (54, 53, '2 kali', '2025', 'belum berganti', '2022-11-05 23:46:32', '2022-11-05 23:46:32', NULL),
-(55, 61, '2 kali', '2025', 'belum berganti', '2022-11-05 23:46:58', '2022-11-05 23:46:58', NULL),
 (56, 62, '2 kali', '2026', 'belum berganti', '2022-11-05 23:47:37', '2022-11-05 23:47:37', NULL),
 (57, 63, '2 kali', '2026', 'belum berganti', '2022-11-05 23:48:11', '2022-11-05 23:48:11', NULL),
 (58, 64, '2 kali', '2026', 'belum berganti', '2022-11-05 23:49:05', '2022-11-05 23:49:05', NULL),
@@ -518,19 +514,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `bayarpajak`
 --
 ALTER TABLE `bayarpajak`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
 
 --
 -- AUTO_INCREMENT for table `blmbayar`
 --
 ALTER TABLE `blmbayar`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
 
 --
 -- AUTO_INCREMENT for table `dafken`
 --
 ALTER TABLE `dafken`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -560,13 +556,13 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `suratkuasa`
 --
 ALTER TABLE `suratkuasa`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Constraints for dumped tables
