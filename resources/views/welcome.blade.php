@@ -12,52 +12,51 @@
 
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>SITAJAKDATA</title>
+    <title>SITAJAKDATA</title>
 
-        <!-- Styles -->
-       
-        <style>
+    <!-- Styles -->
 
+    <style>
+        body {
+            background-image: url(AdminLte/dist/img/3.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            height: 100%;
 
-            body {
-                background-image: url(AdminLte/dist/img/3.png);
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: center;
-                background-attachment: fixed;
-                height: 100%;
-                
-                font-family: 'Nunito', sans-serif;
-                
-            }
+            font-family: 'Nunito', sans-serif;
 
-            .p1 {
-                font-family: "times New Roman", Times, serif;
-            }
+        }
 
-            button{
-                font-family: sans-serif;
-                font-size: 15px;
-                background: #127bcb;
-                color: white;
-                border: white 3px solid;
-                border-radius: 5px;
-                padding: 12px 20px;
-                margin-top: 10px;
-            }
+        .p1 {
+            font-family: "times New Roman", Times, serif;
+        }
 
-        </style>
-    </head>
+        button {
+            font-family: sans-serif;
+            font-size: 15px;
+            background: #127bcb;
+            color: white;
+            border: white 3px solid;
+            border-radius: 5px;
+            padding: 12px 20px;
+            margin-top: 10px;
+        }
 
-    <body>
+    </style>
+</head>
+
+<body>
 
     <!-- music  -->
-        <audio hidden autoplay loop> 
+    <audio hidden autoplay loop>
         <source src="{{ asset('AdminLte/dist/img/marskeuangan.mp3')}}" type="audio/mpeg">
+<<<<<<< HEAD
         </audio>
             
 
@@ -102,4 +101,27 @@
     </body>
                                     
 </html>
+=======
+    </audio>
+    <center>
+        <img src="{{ asset('AdminLte/dist/img/2.png')}}">
+    </center>
+>>>>>>> f48b5603e04b834399d48c0234cd2305418c80fe
 
+    <center>
+        <button>
+            @if (Route::has('login'))
+            @auth
+            <a style="text-decoration:none" href="{{ url('/home') }} ">
+                <font color="white">home</font>
+            </a>
+            @else
+            <a style="text-decoration:none" href="{{ route('login') }}">
+                <font color="white">Log in</font>
+            </a>
+            @endauth
+            @endif
+        </button>
+    </center>
+</body>
+</html>
