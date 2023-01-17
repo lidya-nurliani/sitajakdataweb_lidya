@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 28, 2022 at 07:14 PM
+-- Generation Time: Jan 17, 2023 at 03:33 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -24,10 +24,67 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `bayarpajak`
+-- Table structure for table `bayarselanjutnya`
 --
 
-CREATE TABLE `bayarpajak` (
+CREATE TABLE `bayarselanjutnya` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `unit_kerja` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `dafken_id` bigint(20) UNSIGNED NOT NULL,
+  `tgl_bayar_selanjutnya` date NOT NULL,
+  `pemegang` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `keterangan` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `foto_stnk` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `bayarselanjutnya`
+--
+
+INSERT INTO `bayarselanjutnya` (`id`, `unit_kerja`, `dafken_id`, `tgl_bayar_selanjutnya`, `pemegang`, `keterangan`, `foto_stnk`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(7, 'Bidang TP', 41, '2023-05-29', 'Aktif', 'belum membayar', '1672252958.png', '2022-11-05 07:03:51', '2022-12-28 10:42:38', NULL),
+(8, 'Bidang TP', 42, '2023-05-29', 'Aktif', 'belum membayar', '', '2022-11-05 07:04:33', '2022-12-28 07:52:30', NULL),
+(9, 'Bidang KKP', 43, '2023-05-29', 'Aktif', 'belum membayar', '', '2022-11-05 07:05:20', '2022-12-28 07:53:17', NULL),
+(10, 'Bidang TP', 44, '2023-05-29', 'Aktif', 'belum membayar', '', '2022-11-05 07:06:09', '2022-12-28 07:53:50', NULL),
+(12, 'Bidang Hortik', 46, '2023-05-29', 'Aktif', 'belum membayar', '', '2022-11-05 07:08:16', '2022-12-28 07:54:23', NULL),
+(17, 'Sekretariat', 51, '2023-12-17', 'Aktif', 'belum membayar', '', '2022-11-05 07:17:08', '2022-12-28 07:55:40', NULL),
+(22, 'Sekretariat', 63, '2023-10-26', 'Aktif', 'belum membayar', '', '2022-11-05 07:20:31', '2022-12-28 07:56:32', NULL),
+(23, 'Bidang TP', 64, '2023-10-26', 'Aktif', 'belum membayar', '', '2022-11-05 07:21:10', '2022-12-28 07:57:07', NULL),
+(24, 'Sekretariat', 65, '2022-12-01', 'Aktif', 'belum membayar', '', '2022-11-05 07:21:39', '2022-11-05 07:21:39', NULL),
+(25, 'Sekretariat', 66, '2022-12-02', 'Aktif', 'belum membayar', '', '2022-11-05 07:22:09', '2022-11-05 07:22:09', NULL),
+(37, 'Sekretariat', 6, '2023-08-23', 'Aktif', 'belum membayar', '', '2022-12-28 07:10:38', '2022-12-28 07:10:38', NULL),
+(38, 'Bidang KKP', 7, '2023-09-24', 'Aktif', 'belum membayar', '', '2022-12-28 07:11:47', '2022-12-28 07:11:47', NULL),
+(39, 'Sekretariat', 9, '2023-01-13', 'Aktif', 'belum membayar', '', '2022-12-28 07:12:39', '2022-12-28 07:12:39', NULL),
+(40, 'Sekretariat', 10, '2023-02-14', 'Aktif', 'belum membayar', '', '2022-12-28 07:14:26', '2022-12-28 07:14:26', NULL),
+(41, 'Sekretariat', 25, '2023-02-14', 'Aktif', 'belum membayar', '', '2022-12-28 07:15:42', '2022-12-28 07:15:42', NULL),
+(42, 'Sekretariat', 28, '2023-05-06', 'Aktif', 'belum membayar', '', '2022-12-28 07:17:40', '2022-12-28 07:17:40', NULL),
+(43, 'UPTD Proteksi Tanaman Pangan dan Holtikultura', 29, '2023-11-10', 'Aktif', 'belum membayar', '', '2022-12-28 07:18:32', '2022-12-28 07:18:32', NULL),
+(44, 'Bidang Hortik', 30, '2023-11-11', 'Pasif', 'belum membayar', '', '2022-12-28 07:19:39', '2022-12-28 07:19:39', NULL),
+(45, 'Sekretariat', 31, '2023-11-19', 'Aktif', 'belum membayar', '', '2022-12-28 07:20:18', '2022-12-28 07:21:46', NULL),
+(46, 'Sekretariat', 32, '2023-11-19', 'Pasif', 'belum membayar', '', '2022-12-28 07:21:14', '2022-12-28 07:21:14', NULL),
+(47, 'Sekretariat', 35, '2023-11-19', 'Aktif', 'belum membayar', '', '2022-12-28 07:22:40', '2022-12-28 07:22:40', NULL),
+(48, 'Sekretariat', 37, '2023-01-10', 'Aktif', 'belum membayar', '', '2022-12-28 07:23:24', '2022-12-28 07:23:24', NULL),
+(49, 'Bidang KKP', 38, '2023-03-17', 'Aktif', 'belum membayar', '', '2022-12-28 07:24:27', '2022-12-28 07:24:27', NULL),
+(50, 'Bidang TP', 39, '2023-04-12', 'Aktif', 'belum membayar', '', '2022-12-28 07:25:14', '2022-12-28 07:25:14', NULL),
+(51, 'Sekretariat', 40, '2023-04-24', 'Aktif', 'belum membayar', '', '2022-12-28 07:25:57', '2022-12-28 07:25:57', NULL),
+(52, 'Bidang Hortik', 13, '2023-08-01', 'Aktif', 'belum membayar', '', '2022-12-28 07:27:16', '2022-12-28 07:27:16', NULL),
+(53, 'Bidang Hortik', 16, '2023-05-29', 'Pasif', 'belum membayar', '', '2022-12-28 07:30:43', '2022-12-28 07:30:43', NULL),
+(54, 'Bidang Hortik', 17, '2023-06-03', 'Aktif', 'belum membayar', '', '2022-12-28 07:49:22', '2022-12-28 07:49:22', NULL),
+(55, 'Sekretariat', 19, '2023-05-29', 'Pasif', 'belum membayar', '', '2022-12-28 07:50:07', '2022-12-28 07:50:07', NULL),
+(56, 'Bidang KKP', 21, '2023-05-29', 'Aktif', 'belum membayar', '', '2022-12-28 07:50:58', '2022-12-28 07:50:58', NULL),
+(57, 'Bidang Hortik', 49, '2023-05-29', 'Aktif', 'belum membayar', '', '2022-12-28 09:08:22', '2022-12-28 09:08:22', NULL),
+(58, 'Sekretariat', 52, '2023-08-13', 'Aktif', 'belum membayar', '', '2022-12-28 09:10:09', '2022-12-28 09:10:09', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `blmlunas`
+--
+
+CREATE TABLE `blmlunas` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `unit_kerja` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `dafken_id` bigint(20) UNSIGNED NOT NULL,
@@ -42,10 +99,10 @@ CREATE TABLE `bayarpajak` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `bayarpajak`
+-- Dumping data for table `blmlunas`
 --
 
-INSERT INTO `bayarpajak` (`id`, `unit_kerja`, `dafken_id`, `pembayaran_pajak`, `tgl_bayar`, `pemegang`, `keterangan`, `foto_stnk`, `created_at`, `updated_at`, `deleted_at`) VALUES
+INSERT INTO `blmlunas` (`id`, `unit_kerja`, `dafken_id`, `pembayaran_pajak`, `tgl_bayar`, `pemegang`, `keterangan`, `foto_stnk`, `created_at`, `updated_at`, `deleted_at`) VALUES
 (10, 'Sekretariat', 5, '250000', '2022-09-23', 'Aktif', 'belum membayar', '1672243902.png', '2022-10-20 07:33:01', '2022-12-28 08:11:42', NULL),
 (13, 'Sekretariat', 8, '220000', '2022-09-23', 'Aktif', 'belum membayar', '1672243985.png', '2022-10-20 07:38:39', '2022-12-28 08:13:05', NULL),
 (16, 'Sekretariat', 11, '350000', '2022-08-07', 'Aktif', 'belum membayar', '1672244060.png', '2022-10-20 07:41:17', '2022-12-28 08:14:20', NULL),
@@ -83,63 +140,6 @@ INSERT INTO `bayarpajak` (`id`, `unit_kerja`, `dafken_id`, `pembayaran_pajak`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `blmbayar`
---
-
-CREATE TABLE `blmbayar` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `unit_kerja` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `dafken_id` bigint(20) UNSIGNED NOT NULL,
-  `tgl_bayar_selanjutnya` date NOT NULL,
-  `pemegang` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `keterangan` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `foto_stnk` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `blmbayar`
---
-
-INSERT INTO `blmbayar` (`id`, `unit_kerja`, `dafken_id`, `tgl_bayar_selanjutnya`, `pemegang`, `keterangan`, `foto_stnk`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(7, 'Bidang TP', 41, '2022-05-29', 'Aktif', 'belum membayar', '1672250365.png', '2022-11-05 07:03:51', '2022-12-28 09:59:25', NULL),
-(8, 'Bidang TP', 42, '2023-05-29', 'Aktif', 'belum membayar', '', '2022-11-05 07:04:33', '2022-12-28 07:52:30', NULL),
-(9, 'Bidang KKP', 43, '2023-05-29', 'Aktif', 'belum membayar', '', '2022-11-05 07:05:20', '2022-12-28 07:53:17', NULL),
-(10, 'Bidang TP', 44, '2023-05-29', 'Aktif', 'belum membayar', '', '2022-11-05 07:06:09', '2022-12-28 07:53:50', NULL),
-(12, 'Bidang Hortik', 46, '2023-05-29', 'Aktif', 'belum membayar', '', '2022-11-05 07:08:16', '2022-12-28 07:54:23', NULL),
-(17, 'Sekretariat', 51, '2023-12-17', 'Aktif', 'belum membayar', '', '2022-11-05 07:17:08', '2022-12-28 07:55:40', NULL),
-(22, 'Sekretariat', 63, '2023-10-26', 'Aktif', 'belum membayar', '', '2022-11-05 07:20:31', '2022-12-28 07:56:32', NULL),
-(23, 'Bidang TP', 64, '2023-10-26', 'Aktif', 'belum membayar', '', '2022-11-05 07:21:10', '2022-12-28 07:57:07', NULL),
-(24, 'Sekretariat', 65, '2022-12-01', 'Aktif', 'belum membayar', '', '2022-11-05 07:21:39', '2022-11-05 07:21:39', NULL),
-(25, 'Sekretariat', 66, '2022-12-02', 'Aktif', 'belum membayar', '', '2022-11-05 07:22:09', '2022-11-05 07:22:09', NULL),
-(37, 'Sekretariat', 6, '2023-08-23', 'Aktif', 'belum membayar', '', '2022-12-28 07:10:38', '2022-12-28 07:10:38', NULL),
-(38, 'Bidang KKP', 7, '2023-09-24', 'Aktif', 'belum membayar', '', '2022-12-28 07:11:47', '2022-12-28 07:11:47', NULL),
-(39, 'Sekretariat', 9, '2023-01-13', 'Aktif', 'belum membayar', '', '2022-12-28 07:12:39', '2022-12-28 07:12:39', NULL),
-(40, 'Sekretariat', 10, '2023-02-14', 'Aktif', 'belum membayar', '', '2022-12-28 07:14:26', '2022-12-28 07:14:26', NULL),
-(41, 'Sekretariat', 25, '2023-02-14', 'Aktif', 'belum membayar', '', '2022-12-28 07:15:42', '2022-12-28 07:15:42', NULL),
-(42, 'Sekretariat', 28, '2023-05-06', 'Aktif', 'belum membayar', '', '2022-12-28 07:17:40', '2022-12-28 07:17:40', NULL),
-(43, 'UPTD Proteksi Tanaman Pangan dan Holtikultura', 29, '2023-11-10', 'Aktif', 'belum membayar', '', '2022-12-28 07:18:32', '2022-12-28 07:18:32', NULL),
-(44, 'Bidang Hortik', 30, '2023-11-11', 'Pasif', 'belum membayar', '', '2022-12-28 07:19:39', '2022-12-28 07:19:39', NULL),
-(45, 'Sekretariat', 31, '2023-11-19', 'Aktif', 'belum membayar', '', '2022-12-28 07:20:18', '2022-12-28 07:21:46', NULL),
-(46, 'Sekretariat', 32, '2023-11-19', 'Pasif', 'belum membayar', '', '2022-12-28 07:21:14', '2022-12-28 07:21:14', NULL),
-(47, 'Sekretariat', 35, '2023-11-19', 'Aktif', 'belum membayar', '', '2022-12-28 07:22:40', '2022-12-28 07:22:40', NULL),
-(48, 'Sekretariat', 37, '2023-01-10', 'Aktif', 'belum membayar', '', '2022-12-28 07:23:24', '2022-12-28 07:23:24', NULL),
-(49, 'Bidang KKP', 38, '2023-03-17', 'Aktif', 'belum membayar', '', '2022-12-28 07:24:27', '2022-12-28 07:24:27', NULL),
-(50, 'Bidang TP', 39, '2023-04-12', 'Aktif', 'belum membayar', '', '2022-12-28 07:25:14', '2022-12-28 07:25:14', NULL),
-(51, 'Sekretariat', 40, '2023-04-24', 'Aktif', 'belum membayar', '', '2022-12-28 07:25:57', '2022-12-28 07:25:57', NULL),
-(52, 'Bidang Hortik', 13, '2023-08-01', 'Aktif', 'belum membayar', '', '2022-12-28 07:27:16', '2022-12-28 07:27:16', NULL),
-(53, 'Bidang Hortik', 16, '2023-05-29', 'Pasif', 'belum membayar', '', '2022-12-28 07:30:43', '2022-12-28 07:30:43', NULL),
-(54, 'Bidang Hortik', 17, '2023-06-03', 'Aktif', 'belum membayar', '', '2022-12-28 07:49:22', '2022-12-28 07:49:22', NULL),
-(55, 'Sekretariat', 19, '2023-05-29', 'Pasif', 'belum membayar', '', '2022-12-28 07:50:07', '2022-12-28 07:50:07', NULL),
-(56, 'Bidang KKP', 21, '2023-05-29', 'Aktif', 'belum membayar', '', '2022-12-28 07:50:58', '2022-12-28 07:50:58', NULL),
-(57, 'Bidang Hortik', 49, '2023-05-29', 'Aktif', 'belum membayar', '', '2022-12-28 09:08:22', '2022-12-28 09:08:22', NULL),
-(58, 'Sekretariat', 52, '2023-08-13', 'Aktif', 'belum membayar', '', '2022-12-28 09:10:09', '2022-12-28 09:10:09', NULL);
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `dafken`
 --
 
@@ -167,7 +167,7 @@ CREATE TABLE `dafken` (
 
 INSERT INTO `dafken` (`id`, `nama_pemegang`, `merk_kendaraan`, `jenis_kendaraan`, `no_polisi`, `no_mesin`, `no_rangka`, `tahun`, `harga_perolehan`, `sumber_dana`, `keterangan`, `foto_fisik`, `created_at`, `updated_at`, `deleted_at`) VALUES
 (3, 'M. aswan M', 'toyota kijang pick up', 'Roda 4', 'KT 8275 B', '7K - 0191496', 'MHF31KF6000005766', '1997', '0', 'APBN', 'Rusak', '1670656763.jpg', '2022-10-15 23:27:40', '2022-12-09 23:19:23', NULL),
-(4, 'Ambran Hasan', 'toyota kijang pick up', 'Roda 4', 'KT 1086 C', '9941076', '994128', '1999', '0', 'APBN', 'proses penghapusan', '', '2022-10-15 23:28:43', '2022-12-07 07:13:35', NULL),
+(4, 'Ambran Hasan', 'toyota kijang pick up', 'Roda 4', 'KT 1086 C', '9941076', '994128', '1999', '0', '', 'proses penghapusan', '1673492463.png', '2022-10-15 23:28:43', '2023-01-11 19:01:04', NULL),
 (5, 'pool dinas', 'L200 strada', 'Roda 4', 'KT 8455 BZ', '4D56BT2889', 'MMBJNK7404D080337', '2004', '0', 'APBD', '-', '1671289461.png', '2022-10-15 23:56:02', '2022-12-17 07:04:22', NULL),
 (6, 'Pool KTNA', 'ford everest', 'Roda 4', 'KT 1486 BZ', 'WLAT -745276', 'MNBLS406WH11929', '2006', '322500000', 'APBD', '-', '1671289538.png', '2022-10-16 00:09:02', '2022-12-17 07:05:38', NULL),
 (7, 'Ir. Diah Adiaty Yahya, M.MT', 'toyota avanza', 'Roda 4', 'KT 1716 BZ', 'DD38014', 'MHFMIBA3J8K113415', '2008', '137385000', 'APBD', '-', '1671289623.png', '2022-10-16 00:14:27', '2022-12-17 07:07:03', NULL),
@@ -408,6 +408,21 @@ CREATE TABLE `suratkuasa` (
   `deleted_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `suratkuasa`
+--
+
+INSERT INTO `suratkuasa` (`id`, `dafken_id`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(9, 3, '2023-01-11 19:07:11', '2023-01-11 19:07:11', NULL),
+(10, 4, '2023-01-11 19:07:23', '2023-01-11 19:07:23', NULL),
+(11, 5, '2023-01-11 19:07:37', '2023-01-11 19:07:37', NULL),
+(12, 6, '2023-01-11 19:08:09', '2023-01-11 19:08:09', NULL),
+(13, 9, '2023-01-11 19:08:21', '2023-01-11 19:08:21', NULL),
+(14, 11, '2023-01-11 19:08:35', '2023-01-11 19:08:35', NULL),
+(15, 12, '2023-01-11 19:08:58', '2023-01-11 19:08:58', NULL),
+(16, 19, '2023-01-11 19:09:20', '2023-01-11 19:09:20', NULL),
+(17, 23, '2023-01-11 19:10:28', '2023-01-11 19:10:28', NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -439,18 +454,18 @@ INSERT INTO `users` (`id`, `name`, `level`, `email`, `email_verified_at`, `passw
 --
 
 --
--- Indexes for table `bayarpajak`
+-- Indexes for table `bayarselanjutnya`
 --
-ALTER TABLE `bayarpajak`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `bayarpajak_dafken_id_foreign` (`dafken_id`);
-
---
--- Indexes for table `blmbayar`
---
-ALTER TABLE `blmbayar`
+ALTER TABLE `bayarselanjutnya`
   ADD PRIMARY KEY (`id`),
   ADD KEY `blmbayar_dafken_id_foreign` (`dafken_id`);
+
+--
+-- Indexes for table `blmlunas`
+--
+ALTER TABLE `blmlunas`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `bayarpajak_dafken_id_foreign` (`dafken_id`);
 
 --
 -- Indexes for table `dafken`
@@ -511,16 +526,16 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT for table `bayarpajak`
+-- AUTO_INCREMENT for table `bayarselanjutnya`
 --
-ALTER TABLE `bayarpajak`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
+ALTER TABLE `bayarselanjutnya`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
 
 --
--- AUTO_INCREMENT for table `blmbayar`
+-- AUTO_INCREMENT for table `blmlunas`
 --
-ALTER TABLE `blmbayar`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
+ALTER TABLE `blmlunas`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
 
 --
 -- AUTO_INCREMENT for table `dafken`
@@ -556,7 +571,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `suratkuasa`
 --
 ALTER TABLE `suratkuasa`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `users`
@@ -569,16 +584,16 @@ ALTER TABLE `users`
 --
 
 --
--- Constraints for table `bayarpajak`
+-- Constraints for table `bayarselanjutnya`
 --
-ALTER TABLE `bayarpajak`
-  ADD CONSTRAINT `bayarpajak_dafken_id_foreign` FOREIGN KEY (`dafken_id`) REFERENCES `dafken` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `bayarselanjutnya`
+  ADD CONSTRAINT `blmbayar_dafken_id_foreign` FOREIGN KEY (`dafken_id`) REFERENCES `dafken` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `blmbayar`
+-- Constraints for table `blmlunas`
 --
-ALTER TABLE `blmbayar`
-  ADD CONSTRAINT `blmbayar_dafken_id_foreign` FOREIGN KEY (`dafken_id`) REFERENCES `dafken` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `blmlunas`
+  ADD CONSTRAINT `bayarpajak_dafken_id_foreign` FOREIGN KEY (`dafken_id`) REFERENCES `dafken` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `perbaruanplat`
