@@ -144,14 +144,14 @@ $(function(){
             <div class="small-box bg-blue">
                 <div class="inner">
                     <span class="info-box-number">
-                        <h3 align="center">{{$bayarpajak}}</h3>
+                        <h3 align="center">{{$blmlunas}}</h3>
                     </span>
-                    <p align="center">Data Pembayar Pajak Selesai</p>
+                    <p align="center">Data Pembayar Pajak belum lunas</p>
                 </div>
                 <div class="icon">
                     <i class="ion ion-stats-bars"></i>
                 </div>
-                <a href="index-bayarpajak" class="small-box-footer"><i class="fa fa-arrow-circle-right"></i></a>
+                <a href="index-blmlunas" class="small-box-footer"><i class="fa fa-arrow-circle-right"></i></a>
             </div>
         </div>
 
@@ -160,14 +160,14 @@ $(function(){
             <div class="small-box bg-blue">
                 <div class="inner">
                     <span class="info-box-number">
-                        <h3 align="center">{{$blmbayar}}</h3>
+                        <h3 align="center">{{$bayarselanjutnya}}</h3>
                     </span>
                     <p align="center">data Pembayar Pajak selanjutnya</p>
                 </div>
                 <div class="icon">
                     <i class="ion ion-person-add"></i>
                 </div>
-                <a href="index-blmbayar" class="small-box-footer"> <i class="fa fa-arrow-circle-right"></i></a>
+                <a href="index-bayarselanjutnya" class="small-box-footer"> <i class="fa fa-arrow-circle-right"></i></a>
             </div>
         </div>
 

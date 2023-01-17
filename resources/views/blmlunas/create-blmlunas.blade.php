@@ -21,7 +21,7 @@
         <div class="card-header">
         </div>
         <div class="card-body">
-            <form action="{{ route('simpan-bayarpajak') }}" method="post" enctype="multipart/form-data">
+            <form action="{{ route('simpan-blmlunas') }}" method="post" enctype="multipart/form-data">
                 {{csrf_field() }}
                 <div class="form-group">
                 <label>Pilih Bidang</label>

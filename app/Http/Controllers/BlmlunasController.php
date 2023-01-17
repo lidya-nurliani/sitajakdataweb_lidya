@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Bayarpajak;
+use App\Models\Blmlunas;
 use App\Models\Dafken;
 
-class BayarpajakController extends Controller
+class BlmlunasController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,8 @@ class BayarpajakController extends Controller
      */
     public function index()
     {
-        $bayarpajak = Bayarpajak::all();
-        return view('bayarpajak.index-bayarpajak',compact('bayarpajak'));
+        $blmlunas = Blmlunas::all();
+        return view('blmlunas.index-blmlunas',compact('blmlunas'));
     }
 
     /**
@@ -27,7 +27,7 @@ class BayarpajakController extends Controller
     public function create()
     {
         $dafken = Dafken::all();
-        return view('bayarpajak.create-bayarpajak', compact('dafken'));
+        return view('blmlunas.create-blmlunas', compact('dafken'));
     }
 
     /**
@@ -42,17 +42,17 @@ class BayarpajakController extends Controller
         $fileName = time().'.'.$request->foto_stnk->extension();  
         $request->foto_stnk->move(public_path('foto_stnk'), $fileName);
 
-        $bayarpajak = new Bayarpajak;
-        $bayarpajak->unit_kerja = $request->unit_kerja;
-        $bayarpajak->dafken_id = $request->dafken_id;
-        $bayarpajak->pembayaran_pajak = $request->pembayaran_pajak;
-        $bayarpajak->pemegang = $request->pemegang;
-        $bayarpajak->tgl_bayar = $request->tgl_bayar;
-        $bayarpajak->keterangan = $request->keterangan;
-        $bayarpajak->foto_stnk = $fileName;
-        $bayarpajak->save();
+        $blmlunas = new Blmlunas;
+        $blmlunas->unit_kerja = $request->unit_kerja;
+        $blmlunas->dafken_id = $request->dafken_id;
+        $blmlunas->pembayaran_pajak = $request->pembayaran_pajak;
+        $blmlunas->pemegang = $request->pemegang;
+        $blmlunas->tgl_bayar = $request->tgl_bayar;
+        $blmlunas->keterangan = $request->keterangan;
+        $blmlunas->foto_stnk = $fileName;
+        $blmlunas->save();
 
-        return redirect ('index-bayarpajak')->with('toast_success', 'data berhasil Tersimpan!');
+        return redirect ('index-blmlunas')->with('toast_success', 'data berhasil Tersimpan!');
     }
 
     /**
@@ -75,8 +75,8 @@ class BayarpajakController extends Controller
     public function edit($id)
     {
         $dafken = Dafken::all();
-        $bayarpajak = Bayarpajak::findorfail($id);
-        return view('bayarpajak.edit-bayarpajak',compact('bayarpajak','dafken'));
+        $blmlunas = Blmlunas::findorfail($id);
+        return view('blmlunas.edit-blmlunas',compact('blmlunas','dafken'));
     }
 
     /**
@@ -92,17 +92,17 @@ class BayarpajakController extends Controller
         $fileName = time().'.'.$request->foto_stnk->extension();  
         $request->foto_stnk->move(public_path('foto_stnk'), $fileName);
 
-        $bayarpajak = Bayarpajak::findorfail($id);
-        $bayarpajak->unit_kerja = $request->unit_kerja;
-        $bayarpajak->dafken_id = $request->dafken_id;
-        $bayarpajak->pembayaran_pajak = $request->pembayaran_pajak;
-        $bayarpajak->pemegang = $request->pemegang;
-        $bayarpajak->tgl_bayar = $request->tgl_bayar;
-        $bayarpajak->keterangan = $request->keterangan;
-        $bayarpajak->foto_stnk = $fileName;
-        $bayarpajak->update();
+        $blmlunas = Blmlunas::findorfail($id);
+        $blmlunas->unit_kerja = $request->unit_kerja;
+        $blmlunas->dafken_id = $request->dafken_id;
+        $blmlunas->pembayaran_pajak = $request->pembayaran_pajak;
+        $blmlunas->pemegang = $request->pemegang;
+        $blmlunas->tgl_bayar = $request->tgl_bayar;
+        $blmlunas->keterangan = $request->keterangan;
+        $blmlunas->foto_stnk = $fileName;
+        $blmlunas->update();
 
-        return redirect ('index-bayarpajak')->with('toast_success', 'Data Berhasil Diubah!');
+        return redirect ('index-blmlunas')->with('toast_success', 'Data Berhasil Diubah!');
         // dd($request->all());
     }
 
@@ -114,8 +114,8 @@ class BayarpajakController extends Controller
      */
     public function destroy($id)
     {
-        $bayarpajak = Bayarpajak::findorfail($id);
-        $bayarpajak->delete();
+        $blmlunas = Blmlunas::findorfail($id);
+        $blmlunas->delete();
 
         return back()->with('info', 'Data Berhasil Dihapus!');
     }

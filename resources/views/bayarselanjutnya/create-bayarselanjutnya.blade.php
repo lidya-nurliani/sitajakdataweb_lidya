@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title','Pembayaran Pajak & STNK')
+@section('title','pembayaran selanjutnya')
 
 @section('content')
 <!-- Content Header (Page header) -->
@@ -21,7 +21,7 @@
         <div class="card-header">
         </div>
         <div class="card-body">
-            <form action="{{ route('simpan-blmbayar') }}" method="post" enctype="multipart/form-data">
+            <form action="{{ route('simpan-bayarselanjutnya') }}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
                 <label>Pilih Bidang</label>

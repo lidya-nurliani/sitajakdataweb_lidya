@@ -31,12 +31,12 @@
 </div>
 
 <div class="card-body">
-    <form action="{{ url('update-blmbayar', $blmbayar->id) }}" method="post" enctype="multipart/form-data">
+    <form action="{{ url('update-bayarselanjutnya', $bayarselanjutnya->id) }}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
         <label>Pilih Bidang</label>
             <select id="unit_kerja" name="unit_kerja" class="form-control" placeholder="Unit kerja"
-                value="{{ $blmbayar->unit_kerja }}">
+                value="{{ $bayarselanjutnya->unit_kerja }}">
                 <option value="">Unit kerja/bidang</option>
                 <option value="Sekretariat"> Sekretariat</option>
                 <option value="Bidang TP"> Bidang TP</option>
@@ -59,7 +59,7 @@
                 <option value="">daftar kendaraan</option>
                 @foreach ($dafken as $item)
                 <option value="{{ $item ['id'] }}"
-                    {{ $item ['id']==$blmbayar->dafken_id ? 'selected="selected"' : '' }}>
+                    {{ $item ['id']==$bayarselanjutnya->dafken_id ? 'selected="selected"' : '' }}>
                     {{ $item->no_polisi."(".$item->jenis_kendaraan.") - ".$item->nama_pemegang }}</option>
                 @endforeach
             </select>
@@ -68,7 +68,7 @@
         <div class="form-group">
         <label>Tanggal bayar selanjutnya</label>
             <input type="date" id="tgl_bayar_selanjutnya" name="tgl_bayar_selanjutnya" class="form-control"
-                placeholder="tgl bayar" value="{{ $blmbayar->tgl_bayar }}">
+                placeholder="tgl bayar" value="{{ $bayarselanjutnya->tgl_bayar }}">
         </div>
 
         <div class="form-group">
@@ -83,13 +83,13 @@
         <div class="form-group">
         <label>Keterangan</label>
             <input type="text" id="keterangan" name="keterangan" class="form-control" placeholder="keterangan"
-                value="{{ $blmbayar->keterangan }}">
+                value="{{ $bayarselanjutnya->keterangan }}">
         </div>
 
         <div class="form-group">
         <label>Upload File STNK/BPKB</label>
             <input type="file" id="foto_stnk" name="foto_stnk" class="form-control" placeholder="foto stnk"
-                value="{{ $blmbayar->foto_stnk }}">
+                value="{{ $bayarselanjutnya->foto_stnk }}">
         </div>
 
         <div class="form-group">

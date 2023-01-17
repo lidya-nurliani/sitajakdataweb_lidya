@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title','Bayar Pajak & STNK')
+@section('title','bayarselanjutnya')
 
 @section('css')
 <link rel="stylesheet" href="{{ asset('AdminLte/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}">
@@ -38,7 +38,7 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-10">
-                <h4>Data Pembayar Pajak & STNK yang belum membayar pada tahun sebelumnya</h4>
+                <h1 class="m-0">Data Pembayar Pajak & STNK tahun berikutnya</h1>
             </div><!-- /.col -->
         </div><!-- /.row -->
     </div><!-- /.container-fluid -->
@@ -51,13 +51,12 @@
         <div class="card-header">
             <div class="card-tools">
                 @if(auth()->user()->level == "admin")
-                <a href="{{ route('create-bayarpajak') }}" class="btn btn-success"> Tambah Data <i
+                <a href="{{ route('create-bayarselanjutnya') }}" class="btn btn-success"> Tambah Data <i
                         class="far fa-plus-square"></i></a>
             </div>
             @endif
         </div>
         <div class="card-body">
-        <div style="overflow-x:auto">
             <table id="example1" class="table table-bordered">
               <thead>
                 <tr>
@@ -65,8 +64,7 @@
                     <th>unit kerja </th>
                     <th>nama pemegang</th>
                     <th>no polisi</th>
-                    <th>pembayaran pajak</th>
-                    <th>tgl bayar</th>
+                    <th>tgl bayar selanjutnya</th>
                     <th>pemegang</th>
                     <th>keterangan</th>
                     <th>foto STNK/BPKB kendaraan</th>
@@ -74,14 +72,13 @@
                 </tr>
               </thead>
               <tbody>
-                @foreach ($bayarpajak as $item)
+                @foreach ($bayarselanjutnya as $item)
                 <tr>
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $item->unit_kerja }}</td>
                     <td>{{ $item->dafken->nama_pemegang }}</td>
                     <td>{{ $item->dafken->no_polisi }}</td>
-                    <td>Rp. {{ number_format($item->pembayaran_pajak) }}</td>
-                    <td>{{ date('d-m-Y',strtotime($item->tgl_bayar)) }}</td>
+                    <td>{{ date('d-m-Y',strtotime($item->tgl_bayar_selanjutnya)) }}</td>
                     <td>{{ $item->pemegang }}</td>
                     <td>{{ $item->keterangan }}</td>
                     <td>
@@ -94,9 +91,9 @@
                     <td>
                         @if(auth()->user()->level == "admin")
                         <center>
-                            <a href="{{ url('edit-bayarpajak', $item->id) }}"><i class="fas fa-edit"></i></a>
-
-                            <a href="{{ url('delete-bayarpajak', $item->id) }}"><i class="fas fa-trash-alt"
+                            <a href="{{ url('edit-bayarselanjutnya', $item->id) }}"><i class="fas fa-edit"></i></a>
+                            |
+                            <a href="{{ url('delete-bayarselanjutnya', $item->id) }}"><i class="fas fa-trash-alt"
                                     style="color: red"></i></a>
                         </center>
                         @endif
@@ -106,8 +103,8 @@
               </tbody>
             </table>
         </div>
-        </div>
     </div>
 </div>
 <!-- /.content -->
+</div>
 @endsection

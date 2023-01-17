@@ -4,8 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DafkenController;
-use App\Http\Controllers\BlmbayarController;
-use App\Http\Controllers\BayarpajakController;
+use App\Http\Controllers\BayarselanjutnyaController;
+use App\Http\Controllers\BlmlunasController;
 use App\Http\Controllers\SuratkuasaController;
 use App\Http\Controllers\PerbaruanplatController;
 
@@ -45,23 +45,23 @@ Route::get('/edit-dafken/{id}', [DafkenController::class, 'edit'])->name('edit-d
 Route::post('/update-dafken/{id}', [DafkenController::class, 'update'])->name('update-dafken');
 Route::get('/delete-dafken/{id}', [DafkenController::class, 'destroy'])->name('delete-dafken');
 
-//bayarpajak sudah byr
+// blm lunas 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::get('/index-bayarpajak', [BayarpajakController::class, 'index'])->name('index-bayarpajak');
-Route::get('/create-bayarpajak', [BayarpajakController::class, 'create'])->name('create-bayarpajak');
-Route::post('/simpan-bayarpajak', [BayarpajakController::class, 'store'])->name('simpan-bayarpajak');
-Route::get('/edit-bayarpajak/{id}', [BayarpajakController::class, 'edit'])->name('edit-bayarpajak');
-Route::post('/update-bayarpajak/{id}', [BayarpajakController::class, 'update'])->name('update-bayarpajak');
-Route::get('/delete-bayarpajak/{id}', [BayarpajakController::class, 'destroy'])->name('delete-bayarpajak');
+Route::get('/index-blmlunas', [BlmlunasController::class, 'index'])->name('index-blmlunas');
+Route::get('/create-blmlunas', [BlmlunasController::class, 'create'])->name('create-blmlunas');
+Route::post('/simpan-blmlunas', [BlmlunasController::class, 'store'])->name('simpan-blmlunas');
+Route::get('/edit-blmlunas/{id}', [BlmlunasController::class, 'edit'])->name('edit-blmlunas');
+Route::post('/update-blmlunas/{id}', [BlmlunasController::class, 'update'])->name('update-blmlunas');
+Route::get('/delete-blmlunas/{id}', [BlmlunasController::class, 'destroy'])->name('delete-blmlunas');
 
-//blm bayar
+//selanjutnya
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::get('/index-blmbayar', [BlmbayarController::class, 'index'])->name('index-blmbayar');
-Route::get('/create-blmbayar', [BlmbayarController::class, 'create'])->name('create-blmbayar');
-Route::post('/simpan-blmbayar', [BlmbayarController::class, 'store'])->name('simpan-blmbayar');
-Route::get('/edit-blmbayar/{id}', [BlmbayarController::class, 'edit'])->name('edit-blmbayar');
-Route::post('/update-blmbayar/{id}', [BlmbayarController::class, 'update'])->name('update-blmbayar');
-Route::get('/delete-blmbayar/{id}', [BlmbayarController::class, 'destroy'])->name('delete-blmbayar');
+Route::get('/index-bayarselanjutnya', [BayarselanjutnyaController::class, 'index'])->name('index-bayarselanjutnya');
+Route::get('/create-bayarselanjutnya', [BayarselanjutnyaController::class, 'create'])->name('create-bayarselanjutnya');
+Route::post('/simpan-bayarselanjutnya', [BayarselanjutnyaController::class, 'store'])->name('simpan-bayarselanjutnya');
+Route::get('/edit-bayarselanjutnya/{id}', [BayarselanjutnyaController::class, 'edit'])->name('edit-bayarselanjutnya');
+Route::post('/update-bayarselanjutnya/{id}', [BayarselanjutnyaController::class, 'update'])->name('update-bayarselanjutnya');
+Route::get('/delete-bayarselanjutnya/{id}', [BayarselanjutnyaController::class, 'destroy'])->name('delete-bayarselanjutnya');
 
 //suratkuasa
 Route::get('/home', [HomeController::class, 'index'])->name('home');

@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Blmbayar;
+use App\Models\Bayarselanjutnya;
 use App\Models\Dafken;
 
-class BlmbayarController extends Controller
+class BayarselanjutnyaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,8 @@ class BlmbayarController extends Controller
      */
     public function index()
     {
-        $blmbayar = Blmbayar::all();
-        return view('blmbayar.index-blmbayar',compact('blmbayar'));
+        $bayarselanjutnya = Bayarselanjutnya::all();
+        return view('bayarselanjutnya.index-bayarselanjutnya',compact('bayarselanjutnya'));
     }
 
     /**
@@ -27,7 +27,7 @@ class BlmbayarController extends Controller
     public function create()
     {
         $dafken = Dafken::all();
-        return view('blmbayar.create-blmbayar', compact('dafken'));
+        return view('bayarselanjutnya.create-bayarselanjutnya', compact('dafken'));
     }
 
     /**
@@ -42,16 +42,16 @@ class BlmbayarController extends Controller
         $fileName = time().'.'.$request->foto_stnk->extension();  
         $request->foto_stnk->move(public_path('foto_stnk'), $fileName);
 
-        $blmbayar = new Blmbayar;
-        $blmbayar->unit_kerja = $request->unit_kerja;
-        $blmbayar->dafken_id = $request->dafken_id;
-        $blmbayar->tgl_bayar_selanjutnya = $request->tgl_bayar_selanjutnya;
-        $blmbayar->pemegang = $request->pemegang;
-        $blmbayar->keterangan = $request->keterangan;
-        $blmbayar->foto_stnk = $fileName;
-        $blmbayar->save();
+        $bayarselanjutnya = new Bayarselanjutnya;
+        $bayarselanjutnya->unit_kerja = $request->unit_kerja;
+        $bayarselanjutnya->dafken_id = $request->dafken_id;
+        $bayarselanjutnya->tgl_bayar_selanjutnya = $request->tgl_bayar_selanjutnya;
+        $bayarselanjutnya->pemegang = $request->pemegang;
+        $bayarselanjutnya->keterangan = $request->keterangan;
+        $bayarselanjutnya->foto_stnk = $fileName;
+        $bayarselanjutnya->save();
 
-        return redirect ('index-blmbayar')->with('toast_success', 'data berhasil Tersimpan!');
+        return redirect ('index-bayarselanjutnya')->with('toast_success', 'data berhasil Tersimpan!');
     }
 
     /**
@@ -74,8 +74,8 @@ class BlmbayarController extends Controller
     public function edit($id)
     {
         $dafken = Dafken::all();
-        $blmbayar = Blmbayar::findorfail($id);
-        return view('blmbayar.edit-blmbayar',compact('blmbayar','dafken'));
+        $bayarselanjutnya = Bayarselanjutnya::findorfail($id);
+        return view('bayarselanjutnya.edit-bayarselanjutnya',compact('bayarselanjutnya','dafken'));
     }
 
     /**
@@ -91,17 +91,17 @@ class BlmbayarController extends Controller
         $fileName = time().'.'.$request->foto_stnk->extension();  
         $request->foto_stnk->move(public_path('foto_stnk'), $fileName);
 
-        $blmbayar = Blmbayar::findorfail($id);
-        $blmbayar->unit_kerja = $request->unit_kerja;
-        $blmbayar->dafken_id = $request->dafken_id;
-        $blmbayar->tgl_bayar_selanjutnya = $request->tgl_bayar_selanjutnya;
-        $blmbayar->pemegang = $request->pemegang;
-        $blmbayar->keterangan = $request->keterangan;
-        $blmbayar->foto_stnk = $fileName;
-        $blmbayar->update();
+        $bayarselanjutnya = Bayarselanjutnya::findorfail($id);
+        $bayarselanjutnya->unit_kerja = $request->unit_kerja;
+        $bayarselanjutnya->dafken_id = $request->dafken_id;
+        $bayarselanjutnya->tgl_bayar_selanjutnya = $request->tgl_bayar_selanjutnya;
+        $bayarselanjutnya->pemegang = $request->pemegang;
+        $bayarselanjutnya->keterangan = $request->keterangan;
+        $bayarselanjutnya->foto_stnk = $fileName;
+        $bayarselanjutnya->update();
         
 
-        return redirect ('index-blmbayar')->with('toast_success', 'Data Berhasil Diubah!');
+        return redirect ('index-bayarselanjutnya')->with('toast_success', 'Data Berhasil Diubah!');
     }
 
     /**
@@ -112,8 +112,8 @@ class BlmbayarController extends Controller
      */
     public function destroy($id)
     {
-        $blmbayar = Blmbayar::findorfail($id);
-        $blmbayar->delete();
+        $bayarselanjutnya = Bayarselanjutnya::findorfail($id);
+        $bayarselanjutnya->delete();
 
         return back()->with('info', 'Data Berhasil Dihapus!');
     }

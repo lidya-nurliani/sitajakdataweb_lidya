@@ -99,14 +99,14 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="{{ route('index-bayarpajak') }}" class="nav-link ">
+                                    <a href="{{ route('index-blmlunas') }}" class="nav-link ">
                                         <i class="fas fa-file-alt"></i>
                                         <p>
                                         <font color="white">Data Pembayar belum lunas</font>
                                     
                                     </p>
                                     </a>
-                                    <a href="{{ route('index-blmbayar') }}" class="nav-link ">
+                                    <a href="{{ route('index-bayarselanjutnya') }}" class="nav-link ">
                                         <i class="fas fa-file-alt"></i>
                                         <p>
                                         <font color="white">Data Pembayar Pajak Selanjutnya/lunas</font>

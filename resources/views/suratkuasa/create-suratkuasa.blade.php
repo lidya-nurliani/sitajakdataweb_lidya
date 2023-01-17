@@ -8,7 +8,7 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1 class="m-0">Lembar Pengisian Surat kuasa</h1>
+                <h1 class="m-0"> Pengisian data untuk pembuatan Surat kuasa</h1>
             </div><!-- /.col -->
         </div><!-- /.row -->
     </div><!-- /.container-fluid -->
@@ -18,7 +18,7 @@
 <div class="content">
     <div class="card card-info card-outline">
         <div class="card-header">
-            <h1>Buat Surat</h1>
+            <h1>masukkan data</h1>
         </div>
         <div class="card-body">
             <form action="{{ route('simpan-suratkuasa') }}" method="post" enctype="multipart/form-data">

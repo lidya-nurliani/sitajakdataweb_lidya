@@ -38,7 +38,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Pembuatan Surat kuasa</h1>
+                    <h1 class="m-0">Data yang membuat Surat kuasa</h1>
                 </div><!-- /.col -->
 
             </div><!-- /.row -->

@@ -30,12 +30,12 @@
 </div>
 
 <div class="card-body">
-    <form action="{{ url('update-bayarpajak', $bayarpajak->id) }}" method="post" enctype="multipart/form-data">
+    <form action="{{ url('update-blmlunas', $blmlunas->id) }}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
         <label>Pilih Bidang</label>
             <select id="unit_kerja" name="unit_kerja" class="form-control" placeholder="Unit kerja"
-                value="{{ $bayarpajak->unit_kerja }}">
+                value="{{ $blmlunas->unit_kerja }}">
                 <option value="">Unit kerja/bidang</option>
                 <option value="Sekretariat"> Sekretariat</option>
                 <option value="Bidang TP"> Bidang TP</option>
@@ -58,7 +58,7 @@
                 <option value="">daftar kendaraan</option>
                 @foreach ($dafken as $item)
                 <option value="{{ $item ['id'] }}"
-                    {{ $item ['id']==$bayarpajak->dafken_id ? 'selected="selected"' : '' }}>
+                    {{ $item ['id']==$blmlunas->dafken_id ? 'selected="selected"' : '' }}>
                     {{ $item->no_polisi."(".$item->jenis_kendaraan.") - ".$item->nama_pemegang }}</option>
                 @endforeach
             </select>
@@ -66,12 +66,12 @@
         <div class="form-group">
         <label>Jumlah Pembayaran (Rp)</label>
             <input type="text" id="pembayaran_pajak" name="pembayaran_pajak" class="form-control"
-                placeholder="pembayaran pajak" value="{{ $bayarpajak->pembayaran_pajak }}">
+                placeholder="pembayaran pajak" value="{{ $blmlunas->pembayaran_pajak }}">
         </div>
         <div class="form-group">
         <label>Tanggal Bayar</label>
             <input type="date" id="tgl_bayar" name="tgl_bayar" class="form-control" placeholder="tgl bayar"
-                value="{{ $bayarpajak->tgl_bayar }}">
+                value="{{ $blmlunas->tgl_bayar }}">
         </div>
         <div class="form-group">
         <label>Status Pemegang</label>
@@ -85,13 +85,13 @@
         <div class="form-group">
         <label>Keterangan</label>
             <input type="text" id="keterangan" name="keterangan" class="form-control" placeholder="keterangan"
-                value="{{ $bayarpajak->keterangan }}">
+                value="{{ $blmlunas->keterangan }}">
         </div>
 
         <div class="form-group">
         <label>Upload File STNK/BPKB</label>
             <input type="file" id="foto_stnk" name="foto_stnk" class="form-control" placeholder="foto stnk"
-                value="{{ $bayarpajak->foto_stnk }}">
+                value="{{ $blmlunas->foto_stnk }}">
         </div>
 
         <div class="form-group">

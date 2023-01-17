@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Dafken;
-use App\Models\Blmbayar;
-use App\Models\Bayarpajak;
+use App\Models\Bayarselanjutnya;
+use App\Models\Blmlunas;
 use App\Models\Suratkuasa;
 use App\Models\Perbaruanplat;
 use DB;
@@ -25,35 +25,35 @@ class HomeController extends Controller
     public function index()
     {
         $dafken = Dafken::count();
-        $bayarpajak = Bayarpajak::count();
-        $blmbayar = Blmbayar::count();
+        $blmlunas = Blmlunas::count();
+        $bayarselanjutnya = Bayarselanjutnya::count();
         $perbaruanplat = Perbaruanplat::count();
         $suratkuasa = Suratkuasa::count();
 
-        $statsRoda2 = DB::table('bayarpajak')
-                        ->select(DB::raw('MONTHNAME(bayarpajak.tgl_bayar) as bulan'),'bayarpajak.tgl_bayar', DB::raw('COUNT(bayarpajak.id) as total'), DB::raw('YEAR(bayarpajak.tgl_bayar)'))
-                        ->leftJoin('dafken','bayarpajak.dafken_id','=','dafken.id')
+        $statsRoda2 = DB::table('blmlunas')
+                        ->select(DB::raw('MONTHNAME(blmlunas.tgl_bayar) as bulan'),'blmlunas.tgl_bayar', DB::raw('COUNT(blmlunas.id) as total'), DB::raw('YEAR(blmlunas.tgl_bayar)'))
+                        ->leftJoin('dafken','blmlunas.dafken_id','=','dafken.id')
                         ->where('dafken.jenis_kendaraan','=','Roda 2')
-                        ->groupBy(DB::raw('YEAR(bayarpajak.tgl_bayar)'))
-                        ->groupBy(DB::raw('Month(bayarpajak.tgl_bayar)'))
+                        ->groupBy(DB::raw('YEAR(blmlunas.tgl_bayar)'))
+                        ->groupBy(DB::raw('Month(blmlunas.tgl_bayar)'))
                         ->get();
-        $statsRoda4 = DB::table('bayarpajak')
-                        ->select(DB::raw('MONTHNAME(bayarpajak.tgl_bayar) as bulan'),'bayarpajak.tgl_bayar', DB::raw('COUNT(bayarpajak.id) as total'), DB::raw('YEAR(bayarpajak.tgl_bayar)'))
-                        ->leftJoin('dafken','bayarpajak.dafken_id','=','dafken.id')
+        $statsRoda4 = DB::table('blmlunas')
+                        ->select(DB::raw('MONTHNAME(blmlunas.tgl_bayar) as bulan'),'blmlunas.tgl_bayar', DB::raw('COUNT(blmlunas.id) as total'), DB::raw('YEAR(blmlunas.tgl_bayar)'))
+                        ->leftJoin('dafken','blmlunas.dafken_id','=','dafken.id')
                         ->where('dafken.jenis_kendaraan','=','Roda 4')
-                        ->groupBy(DB::raw('YEAR(bayarpajak.tgl_bayar)'))
-                        ->groupBy(DB::raw('Month(bayarpajak.tgl_bayar)'))
+                        ->groupBy(DB::raw('YEAR(blmlunas.tgl_bayar)'))
+                        ->groupBy(DB::raw('Month(blmlunas.tgl_bayar)'))
                         ->get();
         $jmlR2 = Dafken::where('jenis_kendaraan','Roda 2')->count();
         $jmlR4 = Dafken::where('jenis_kendaraan','Roda 4')->count();
-        // DB::table('bayarpajak')
-        // ->select(DB::raw("'MONTHNAME'('bayarpajak.tgl_bayar') as bulan"), 'bayarpajak.tgl_bayar', DB::raw('COUNT(bayarpajak.id) as total'))
-        // ->leftJoin('dafken','bayarpajak.dafken_id','=','dafken.id')
+        // DB::table('blmlunas')
+        // ->select(DB::raw("'MONTHNAME'('blmlunas.tgl_bayar') as bulan"), 'blmlunas.tgl_bayar', DB::raw('COUNT(blmlunas.id) as total'))
+        // ->leftJoin('dafken','blmlunas.dafken_id','=','dafken.id')
         // ->where('dafken.jenis_kendaraan','=','Roda 2')
-        // ->groupBy(DB::raw('YEAR(bayarpajak.tgl_bayar)'))
-        // ->groupBy(DB::raw('Month(bayarpajak.tgl_bayar)'))                        
+        // ->groupBy(DB::raw('YEAR(blmlunas.tgl_bayar)'))
+        // ->groupBy(DB::raw('Month(blmlunas.tgl_bayar)'))                        
         // ->get();
         // dd($statsRoda2);
-        return view('home', compact('dafken','bayarpajak','blmbayar','perbaruanplat','suratkuasa','statsRoda2','statsRoda4','jmlR2','jmlR4'));
+        return view('home', compact('dafken','blmlunas','bayarselanjutnya','perbaruanplat','suratkuasa','statsRoda2','statsRoda4','jmlR2','jmlR4'));
     }
 }
