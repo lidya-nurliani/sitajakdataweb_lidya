@@ -56,7 +56,6 @@
     <!-- music  -->
     <audio hidden autoplay loop>
         <source src="{{ asset('AdminLte/dist/img/marskeuangan.mp3')}}" type="audio/mpeg">
-<<<<<<< HEAD
         </audio>
             
 
@@ -101,27 +100,7 @@
     </body>
                                     
 </html>
-=======
-    </audio>
-    <center>
-        <img src="{{ asset('AdminLte/dist/img/2.png')}}">
-    </center>
->>>>>>> f48b5603e04b834399d48c0234cd2305418c80fe
 
-    <center>
-        <button>
-            @if (Route::has('login'))
-            @auth
-            <a style="text-decoration:none" href="{{ url('/home') }} ">
-                <font color="white">home</font>
-            </a>
-            @else
-            <a style="text-decoration:none" href="{{ route('login') }}">
-                <font color="white">Log in</font>
-            </a>
-            @endauth
-            @endif
-        </button>
-    </center>
+   
 </body>
 </html>
