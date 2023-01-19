@@ -63,7 +63,7 @@
             <center>
             <img src="{{ asset('AdminLte/dist/img/2.png')}}" height="500" width="500">
             </center>
-
+            
         
             
             <center>

@@ -8,6 +8,7 @@ use App\Http\Controllers\BayarselanjutnyaController;
 use App\Http\Controllers\BlmlunasController;
 use App\Http\Controllers\SuratkuasaController;
 use App\Http\Controllers\PerbaruanplatController;
+use App\Http\Controllers\RegistController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,7 +33,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 // Route::get('/login', [LoginController::class, 'halamanlogin'])->name('login');
 // Route::post('/postlogin', [LoginController::class, 'postlogin'])->name('postlogin');
 // Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
-
+Route::post('/registrasi', [RegistController::class, 'index'])->name('registrasi');
 
 Route::group(['middleware'=> ['auth','ceklevel:admin,user']], function () {
 
